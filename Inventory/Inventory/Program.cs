@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+
+using Inventory.Model;
+using Inventory.Presenters;
+using Inventory._Repositories;
+using Inventory.Views;
+
+
+
 
 namespace Inventory
 {
@@ -16,7 +25,13 @@ namespace Inventory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashboardForm());
+
+            string sqlConnectionString = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ConnectionString;
+            IMainView view = new DashboardForm();
+            new MainPresentor(view, sqlConnectionString);
+    
+
+            Application.Run((Form)view);
         }
     }
 }

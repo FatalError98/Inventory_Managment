@@ -41,7 +41,6 @@
             this.settingsBtn = new System.Windows.Forms.Button();
             this.titlePanel = new System.Windows.Forms.Panel();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.desktopPanel = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -268,24 +267,15 @@
             this.titleLabel.TabIndex = 0;
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // desktopPanel
-            // 
-            this.desktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.desktopPanel.Location = new System.Drawing.Point(0, 83);
-            this.desktopPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.desktopPanel.Name = "desktopPanel";
-            this.desktopPanel.Size = new System.Drawing.Size(880, 450);
-            this.desktopPanel.TabIndex = 2;
-            this.desktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.desktopPanel_Paint);
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 533);
-            this.Controls.Add(this.desktopPanel);
             this.Controls.Add(this.titlePanel);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
             this.Name = "DashboardForm";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.DashboardFrom_Load);
@@ -304,7 +294,6 @@
         private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Panel MainMenuPanel;
         private System.Windows.Forms.Button settingsBtn;
-        private System.Windows.Forms.Button mainMeunBtn;
         private System.Windows.Forms.Button addItemBtn;
         private System.Windows.Forms.Button transferItemBtn;
         private System.Windows.Forms.Button inventoryBtn;
@@ -313,7 +302,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Panel desktopPanel;
+        private System.Windows.Forms.Button mainMeunBtn;
     }
 }
 

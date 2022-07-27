@@ -1,6 +1,6 @@
-﻿namespace Inventory.Forms
+﻿namespace Inventory.Views
 {
-    partial class SettingsForm
+    partial class ItemForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // SettingsForm
+            // ItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "SettingsForm";
-            this.Text = "الاعدادات";
-            this.Load += new System.EventHandler(this.SettingsForm_Load);
+            this.Name = "ItemForm";
+            this.Text = "الادخال";
+            this.Load += new System.EventHandler(this.ItemForm_Load);
             this.ResumeLayout(false);
 
         }

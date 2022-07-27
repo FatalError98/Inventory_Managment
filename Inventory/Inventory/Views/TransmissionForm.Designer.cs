@@ -1,6 +1,6 @@
-﻿namespace Inventory.Forms
+﻿namespace Inventory.Views
 {
-    partial class InventoryForm
+    partial class TransmissionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // InventoryForm
+            // TransmissionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "InventoryForm";
-            this.Text = "الجرد";
-            this.Load += new System.EventHandler(this.InventoryForm_Load);
+            this.Name = "TransmissionForm";
+            this.Text = "الاخراج";
+            this.Load += new System.EventHandler(this.TransmissionForm_Load);
             this.ResumeLayout(false);
 
         }

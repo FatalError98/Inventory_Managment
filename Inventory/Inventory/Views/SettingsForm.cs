@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory.Forms
+namespace Inventory.Views
 {
-    public partial class UsersForm : Form
+    public partial class SettingsForm : Form
     {
-        public UsersForm()
+        public SettingsForm()
         {
             InitializeComponent();
         }
 
-        private void UsersForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void SettingsForm_Load(object sender, EventArgs e)
         {
 
         }

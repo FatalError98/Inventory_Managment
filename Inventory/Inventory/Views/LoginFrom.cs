@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory.Forms
+namespace Inventory.Views
 {
-    public partial class ItemForm : Form
+    public partial class LoginFrom : Form
     {
-        public ItemForm()
+        public LoginFrom()
         {
             InitializeComponent();
         }
 
-        private void ItemForm_Load(object sender, EventArgs e)
+        private void LoginFrom_Load(object sender, EventArgs e)
         {
 
         }

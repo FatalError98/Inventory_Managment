@@ -1,6 +1,6 @@
-﻿namespace Inventory.Forms
+﻿namespace Inventory.Views
 {
-    partial class HomeForm
+    partial class InventoryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // HomeForm
+            // InventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "HomeForm";
-            this.Text = "الواجهة الرئيسية";
-            this.Load += new System.EventHandler(this.HomeForm_Load);
+            this.Name = "InventoryForm";
+            this.Text = "الجرد";
+            this.Load += new System.EventHandler(this.InventoryForm_Load);
             this.ResumeLayout(false);
 
         }
