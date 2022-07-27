@@ -19,6 +19,8 @@ namespace Inventory._Repositories
         {
             this.connectionString = connectionString;
         }
+
+        //Methods
         void IUsersRepository.Add(UserModel userModel)
         {
             using (var connection = new SqlConnection(connectionString))
@@ -30,7 +32,7 @@ namespace Inventory._Repositories
                 command.Parameters.Add("@userName", SqlDbType.VarChar).Value = userModel.Name;
                 command.Parameters.Add("@Password", SqlDbType.VarChar).Value = userModel.Password;
                 command.Parameters.Add("@userRole", SqlDbType.VarChar).Value = userModel.Role;
-                command.ExecuteNonQuery();          
+                command.ExecuteNonQuery();
             }
         }
         void IUsersRepository.Delete(int id)
@@ -74,7 +76,7 @@ namespace Inventory._Repositories
         {
             var userList = new List<UserModel>();
 
-            int userId = int.TryParse(value,out _)?Convert.ToInt32(value) : 0;
+            int userId = int.TryParse(value, out _) ? Convert.ToInt32(value) : 0;
             string userName = value;
 
             using (var connection = new SqlConnection(connectionString))
@@ -82,7 +84,7 @@ namespace Inventory._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText =   @"Select * FROM Users 
+                command.CommandText = @"Select * FROM Users 
                                         where UserId=@id or Username like @name+'%'
                                         order by UserId desc";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = userId;
@@ -119,7 +121,5 @@ namespace Inventory._Repositories
                 command.ExecuteNonQuery();
             }
         }
-        //Methods
-
     }
 }
