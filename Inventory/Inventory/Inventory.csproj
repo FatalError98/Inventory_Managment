@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\Common\ModelDataValidation.cs" />
     <Compile Include="Presenters\MainPresentor.cs" />
     <Compile Include="Presenters\UserPresentor.cs" />
     <Compile Include="Views\DashboardForm.cs">

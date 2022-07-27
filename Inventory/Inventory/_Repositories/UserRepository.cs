@@ -21,11 +21,29 @@ namespace Inventory._Repositories
         }
         void IUsersRepository.Add(UserModel userModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "insert into Users values (@userName, @Password, @userRole)";
+                command.Parameters.Add("@userName", SqlDbType.VarChar).Value = userModel.Name;
+                command.Parameters.Add("@Password", SqlDbType.VarChar).Value = userModel.Password;
+                command.Parameters.Add("@userRole", SqlDbType.VarChar).Value = userModel.Role;
+                command.ExecuteNonQuery();          
+            }
         }
         void IUsersRepository.Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "delete from Users where UserId = @id";
+                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.ExecuteNonQuery();
+            }
         }
         IEnumerable<UserModel> IUsersRepository.GetAll()
         {
@@ -88,7 +106,18 @@ namespace Inventory._Repositories
 
         void IUsersRepository.Update(UserModel userModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "update Users set UserName = @username, UserPassword = @password, UserRole = @userrole where UserId =@id";
+                command.Parameters.Add("@username", SqlDbType.VarChar).Value = userModel.Name;
+                command.Parameters.Add("@password", SqlDbType.VarChar).Value = userModel.Password;
+                command.Parameters.Add("@userrole", SqlDbType.VarChar).Value = userModel.Role;
+                command.Parameters.Add("@id", SqlDbType.Int).Value = userModel.Id;
+                command.ExecuteNonQuery();
+            }
         }
         //Methods
 

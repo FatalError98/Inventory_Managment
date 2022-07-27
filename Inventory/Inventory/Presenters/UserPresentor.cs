@@ -64,27 +64,79 @@ namespace Inventory.Presenters
 
         private void CancelAction(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            CleanViewFields();
         }
 
         private void SaveUser(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var model = new UserModel();
+            model.Id = Convert.ToInt32(_userView.UserId);
+            model.Name = _userView.UserName;
+            model.Password = _userView.UserPassword;
+            model.Role = _userView.UserRole;
+            try
+            {
+                new Common.ModelDataValidation().Validate(model);
+                if (_userView.IsEdit)
+                {
+                    _usersRepository.Update(model);
+                    _userView.Message = "تم تحديث المستخدم بنجاح";
+                }
+                else
+                {
+                    _usersRepository.Add(model);
+                    _userView.Message = "تم اضافة نستخدم بنجاح";
+                }
+                _userView.IsSuccessful = true;
+                LoadAllUserList();
+                CleanViewFields();
+            }
+            catch (Exception ex)
+            {
+                _userView.IsSuccessful = false;
+                _userView.Message = ex.Message;
+            }
+        }
+
+        private void CleanViewFields()
+        {
+            _userView.UserId = "";
+            _userView.UserName = "";
+            _userView.UserPassword = "";
+            _userView.UserRole = "";
         }
 
         private void DeleteSelectedUser(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var user = (UserModel)_userBindingSource.Current;
+                _usersRepository.Delete(user.Id);
+                _userView.IsSuccessful = true;
+                _userView.Message = "User Deleteted Successfully";
+                LoadAllUserList();
+            }
+            catch (Exception ex)
+            {
+                _userView.IsSuccessful = false;
+                _userView.Message = ex.Message;
+            }
         }
 
         private void LoadSelectedUsersToEdit(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var users = (UserModel)_userBindingSource.Current;
+            _userView.UserId = users.Id.ToString();
+            _userView.UserName = users.Name.ToString();
+            _userView.UserPassword = users.Password.ToString();
+            _userView.UserRole = users.Role.ToString();
+            _userView.IsEdit = true;
         }
 
         private void AddNewUser(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            _userView.IsEdit = false;
+
         }      
     }
 }

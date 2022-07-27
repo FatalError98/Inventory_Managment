@@ -79,8 +79,46 @@ namespace Inventory.Views
                 if (e.KeyCode == Keys.Enter)
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
-
-            //Other Events
+            //Add New User Event
+            addNewbtn.Click += delegate { 
+                AddEvent?.Invoke(this, EventArgs.Empty);
+                usersTabControl.TabPages.Remove(listTabPage);
+                usersTabControl.TabPages.Add(detailTabPage);
+                detailTabPage.Text = "اضافة مستخدم جديد";
+            };
+            //Edit exisiting  User Event
+            editBtn.Click += delegate { 
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                usersTabControl.TabPages.Remove(listTabPage);
+                usersTabControl.TabPages.Add(detailTabPage);
+                detailTabPage.Text = "تعديل بيانات مستخدم";
+            };
+            //Delete  User Event
+            deletebtn.Click += delegate {
+               ;
+               var  result = MessageBox.Show("هل انت متاكد من حذف هذا المستخدم؟", "تحذير", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if(result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            };
+            //Save New User Event
+            saveBtn.Click += delegate { 
+                SaveEvent?.Invoke(this, EventArgs.Empty); 
+                if(isSuccessful)
+                {
+                    usersTabControl.TabPages.Remove(detailTabPage);
+                    usersTabControl.TabPages.Add(listTabPage);
+                }
+                MessageBox.Show(Message);
+            };
+            //Cancel User Event
+            cancelBtn.Click += delegate { 
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                usersTabControl.TabPages.Remove(detailTabPage);
+                usersTabControl.TabPages.Add(listTabPage);
+            };
         }
 
         public event EventHandler SearchEvent;
