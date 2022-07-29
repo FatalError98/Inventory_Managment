@@ -16,6 +16,7 @@ namespace Inventory.Views
         private bool isSuccessful;
         private bool isEdit;
         private double totalPrice;
+        private int itemId;
         private static ItemForm instance;
         public ItemForm()
         {
@@ -25,10 +26,10 @@ namespace Inventory.Views
         }
 
 
-        public string ItemId 
+        public int ItemId 
         { 
-            get => idTxt.Text; 
-            set => idTxt.Text = value; 
+            get => itemId; 
+            set => itemId = value; 
         }
         public string ItemName 
         { 
@@ -122,14 +123,14 @@ namespace Inventory.Views
                 AddEvent?.Invoke(this, EventArgs.Empty);
                 addUpdateTapControl.TabPages.Remove(addUpdatePage);
                 addUpdateTapControl.TabPages.Add(addUpdatePage);
-                addUpdatePage.Text = "اضافة مادة جديدة";
+                titleLabel.Text = "اضافة مادة جديدة";
             };
             updateBtn.Click += delegate
             {
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 addUpdateTapControl.TabPages.Remove(addUpdatePage);
                 addUpdateTapControl.TabPages.Add(addUpdatePage);
-                addUpdatePage.Text = " تحديث المادة ";
+                titleLabel.Text = " تحديث المادة ";
             };
             deleteBtn.Click += delegate
             {

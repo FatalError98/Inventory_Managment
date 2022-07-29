@@ -36,13 +36,13 @@ namespace Inventory.Presenters
         private void ShowItemView(object sender, EventArgs e)
         {
             IItemView view = new ItemForm();
-            //IItemRepository repository = new ItemRepository(_sqlConnectionString);
-            //new ItemPresentor(view, repository);
+            IItemRepository repository = new ItemRepository(_sqlConnectionString);
+            new ItemPresentor(view, repository);
         }
 
         private void ShowUserView(object sender, EventArgs e)
         {
-            IUserView view = UsersForm.GetInstance((DashboardForm)_mainView);
+            IUserView view = new UsersForm();
             IUsersRepository repository = new UserRepository(_sqlConnectionString);
             new UserPresentor(view, repository);
         }

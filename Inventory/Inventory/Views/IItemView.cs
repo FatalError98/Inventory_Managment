@@ -11,7 +11,7 @@ namespace Inventory.Views
     public interface IItemView
     {
         // Properties - Fields
-        string ItemId { get; set; }
+        int ItemId { get; set; }
         string ItemName { get; set; }   
         string ItemSupplier { get; set; }
         string ItemCategory { get; set; }

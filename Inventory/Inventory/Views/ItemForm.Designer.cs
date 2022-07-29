@@ -35,11 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.addUpdateTapControl = new System.Windows.Forms.TabControl();
             this.addUpdatePage = new System.Windows.Forms.TabPage();
+            this.cancelBtn = new System.Windows.Forms.Button();
+            this.dateLabel = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.descriptionLabel = new System.Windows.Forms.Label();
             this.containNumUpDown = new System.Windows.Forms.NumericUpDown();
             this.quantityNumUpDown = new System.Windows.Forms.NumericUpDown();
-            this.dateLabel = new System.Windows.Forms.Label();
             this.priceTxt = new System.Windows.Forms.TextBox();
             this.sizeTxt = new System.Windows.Forms.TextBox();
             this.containLabel = new System.Windows.Forms.Label();
@@ -49,22 +51,18 @@
             this.supplierTxt = new System.Windows.Forms.TextBox();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.itemTxt = new System.Windows.Forms.TextBox();
-            this.idTxt = new System.Windows.Forms.TextBox();
             this.itemLabel = new System.Windows.Forms.Label();
             this.supplierLabel = new System.Windows.Forms.Label();
-            this.idLabel = new System.Windows.Forms.Label();
             this.sizeLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.cancelBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.addBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
             this.searchTxt = new System.Windows.Forms.TextBox();
-            this.deleteBtn = new System.Windows.Forms.Button();
             this.itemsDataGridView = new System.Windows.Forms.DataGridView();
             this.addUpdateTapControl.SuspendLayout();
             this.addUpdatePage.SuspendLayout();
@@ -84,7 +82,7 @@
             this.addUpdateTapControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.addUpdateTapControl.RightToLeftLayout = true;
             this.addUpdateTapControl.SelectedIndex = 0;
-            this.addUpdateTapControl.Size = new System.Drawing.Size(302, 766);
+            this.addUpdateTapControl.Size = new System.Drawing.Size(302, 700);
             this.addUpdateTapControl.TabIndex = 0;
             // 
             // addUpdatePage
@@ -106,10 +104,8 @@
             this.addUpdatePage.Controls.Add(this.supplierTxt);
             this.addUpdatePage.Controls.Add(this.quantityLabel);
             this.addUpdatePage.Controls.Add(this.itemTxt);
-            this.addUpdatePage.Controls.Add(this.idTxt);
             this.addUpdatePage.Controls.Add(this.itemLabel);
             this.addUpdatePage.Controls.Add(this.supplierLabel);
-            this.addUpdatePage.Controls.Add(this.idLabel);
             this.addUpdatePage.Controls.Add(this.sizeLabel);
             this.addUpdatePage.Controls.Add(this.titleLabel);
             this.addUpdatePage.Controls.Add(this.categoryLabel);
@@ -117,18 +113,64 @@
             this.addUpdatePage.Margin = new System.Windows.Forms.Padding(0);
             this.addUpdatePage.Name = "addUpdatePage";
             this.addUpdatePage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.addUpdatePage.Size = new System.Drawing.Size(294, 735);
+            this.addUpdatePage.Size = new System.Drawing.Size(294, 669);
             this.addUpdatePage.TabIndex = 0;
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.BackColor = System.Drawing.Color.Transparent;
+            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.cancelBtn.FlatAppearance.BorderSize = 2;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.cancelBtn.Location = new System.Drawing.Point(26, 615);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(119, 32);
+            this.cancelBtn.TabIndex = 2;
+            this.cancelBtn.Text = "الغاء";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.dateLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dateLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.dateLabel.Location = new System.Drawing.Point(167, 342);
+            this.dateLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateLabel.Size = new System.Drawing.Size(107, 24);
+            this.dateLabel.TabIndex = 0;
+            this.dateLabel.Text = "التاريخ";
+            this.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dateTimePicker
             // 
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Tajawal", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(25, 408);
+            this.dateTimePicker.Location = new System.Drawing.Point(25, 372);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(0);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePicker.Size = new System.Drawing.Size(249, 26);
             this.dateTimePicker.TabIndex = 1;
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(158, 615);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(117, 32);
+            this.saveBtn.TabIndex = 2;
+            this.saveBtn.Text = "حفظ";
+            this.saveBtn.UseVisualStyleBackColor = false;
             // 
             // descriptionLabel
             // 
@@ -137,7 +179,7 @@
             this.descriptionLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.descriptionLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.descriptionLabel.Location = new System.Drawing.Point(167, 503);
+            this.descriptionLabel.Location = new System.Drawing.Point(167, 467);
             this.descriptionLabel.Margin = new System.Windows.Forms.Padding(0);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -151,7 +193,7 @@
             this.containNumUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.containNumUpDown.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.containNumUpDown.Font = new System.Drawing.Font("Tajawal", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containNumUpDown.Location = new System.Drawing.Point(192, 470);
+            this.containNumUpDown.Location = new System.Drawing.Point(192, 434);
             this.containNumUpDown.Margin = new System.Windows.Forms.Padding(0);
             this.containNumUpDown.Name = "containNumUpDown";
             this.containNumUpDown.Size = new System.Drawing.Size(83, 27);
@@ -163,35 +205,19 @@
             this.quantityNumUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.quantityNumUpDown.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.quantityNumUpDown.Font = new System.Drawing.Font("Tajawal", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityNumUpDown.Location = new System.Drawing.Point(191, 345);
+            this.quantityNumUpDown.Location = new System.Drawing.Point(191, 309);
             this.quantityNumUpDown.Margin = new System.Windows.Forms.Padding(0);
             this.quantityNumUpDown.Name = "quantityNumUpDown";
             this.quantityNumUpDown.Size = new System.Drawing.Size(83, 27);
             this.quantityNumUpDown.TabIndex = 1;
             this.quantityNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // dateLabel
-            // 
-            this.dateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.dateLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dateLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.dateLabel.Location = new System.Drawing.Point(167, 378);
-            this.dateLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateLabel.Size = new System.Drawing.Size(107, 24);
-            this.dateLabel.TabIndex = 0;
-            this.dateLabel.Text = "التاريخ";
-            this.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // priceTxt
             // 
             this.priceTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.priceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.priceTxt.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTxt.Location = new System.Drawing.Point(25, 345);
+            this.priceTxt.Location = new System.Drawing.Point(25, 309);
             this.priceTxt.Name = "priceTxt";
             this.priceTxt.Size = new System.Drawing.Size(157, 27);
             this.priceTxt.TabIndex = 1;
@@ -202,7 +228,7 @@
             this.sizeTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.sizeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sizeTxt.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sizeTxt.Location = new System.Drawing.Point(26, 470);
+            this.sizeTxt.Location = new System.Drawing.Point(26, 434);
             this.sizeTxt.Name = "sizeTxt";
             this.sizeTxt.Size = new System.Drawing.Size(157, 27);
             this.sizeTxt.TabIndex = 1;
@@ -215,7 +241,7 @@
             this.containLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.containLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.containLabel.Location = new System.Drawing.Point(201, 440);
+            this.containLabel.Location = new System.Drawing.Point(201, 404);
             this.containLabel.Margin = new System.Windows.Forms.Padding(0);
             this.containLabel.Name = "containLabel";
             this.containLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -231,7 +257,7 @@
             this.priceLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.priceLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.priceLabel.Location = new System.Drawing.Point(109, 314);
+            this.priceLabel.Location = new System.Drawing.Point(109, 278);
             this.priceLabel.Margin = new System.Windows.Forms.Padding(0);
             this.priceLabel.Name = "priceLabel";
             this.priceLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -245,7 +271,7 @@
             this.categoryTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.categoryTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.categoryTxt.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryTxt.Location = new System.Drawing.Point(23, 281);
+            this.categoryTxt.Location = new System.Drawing.Point(23, 245);
             this.categoryTxt.Name = "categoryTxt";
             this.categoryTxt.Size = new System.Drawing.Size(250, 27);
             this.categoryTxt.TabIndex = 1;
@@ -256,7 +282,7 @@
             this.descriptionTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionTxt.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionTxt.Location = new System.Drawing.Point(25, 533);
+            this.descriptionTxt.Location = new System.Drawing.Point(25, 497);
             this.descriptionTxt.Multiline = true;
             this.descriptionTxt.Name = "descriptionTxt";
             this.descriptionTxt.Size = new System.Drawing.Size(250, 95);
@@ -268,7 +294,7 @@
             this.supplierTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.supplierTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.supplierTxt.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.supplierTxt.Location = new System.Drawing.Point(23, 218);
+            this.supplierTxt.Location = new System.Drawing.Point(23, 182);
             this.supplierTxt.Name = "supplierTxt";
             this.supplierTxt.Size = new System.Drawing.Size(250, 27);
             this.supplierTxt.TabIndex = 1;
@@ -281,7 +307,7 @@
             this.quantityLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.quantityLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.quantityLabel.Location = new System.Drawing.Point(200, 314);
+            this.quantityLabel.Location = new System.Drawing.Point(200, 278);
             this.quantityLabel.Margin = new System.Windows.Forms.Padding(0);
             this.quantityLabel.Name = "quantityLabel";
             this.quantityLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -295,22 +321,11 @@
             this.itemTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.itemTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.itemTxt.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemTxt.Location = new System.Drawing.Point(23, 155);
+            this.itemTxt.Location = new System.Drawing.Point(23, 119);
             this.itemTxt.Name = "itemTxt";
             this.itemTxt.Size = new System.Drawing.Size(250, 27);
             this.itemTxt.TabIndex = 1;
             this.itemTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // idTxt
-            // 
-            this.idTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            this.idTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.idTxt.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTxt.Location = new System.Drawing.Point(211, 92);
-            this.idTxt.Name = "idTxt";
-            this.idTxt.Size = new System.Drawing.Size(62, 27);
-            this.idTxt.TabIndex = 1;
-            this.idTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // itemLabel
             // 
@@ -319,7 +334,7 @@
             this.itemLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.itemLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.itemLabel.Location = new System.Drawing.Point(215, 125);
+            this.itemLabel.Location = new System.Drawing.Point(215, 89);
             this.itemLabel.Margin = new System.Windows.Forms.Padding(0);
             this.itemLabel.Name = "itemLabel";
             this.itemLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -335,7 +350,7 @@
             this.supplierLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.supplierLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supplierLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.supplierLabel.Location = new System.Drawing.Point(209, 188);
+            this.supplierLabel.Location = new System.Drawing.Point(209, 152);
             this.supplierLabel.Margin = new System.Windows.Forms.Padding(0);
             this.supplierLabel.Name = "supplierLabel";
             this.supplierLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -344,22 +359,6 @@
             this.supplierLabel.Text = "المصدر";
             this.supplierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // idLabel
-            // 
-            this.idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.idLabel.BackColor = System.Drawing.Color.Transparent;
-            this.idLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.idLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.idLabel.Location = new System.Drawing.Point(233, 62);
-            this.idLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.idLabel.Size = new System.Drawing.Size(37, 24);
-            this.idLabel.TabIndex = 0;
-            this.idLabel.Text = "ت";
-            this.idLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // sizeLabel
             // 
             this.sizeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -367,7 +366,7 @@
             this.sizeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sizeLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.sizeLabel.Location = new System.Drawing.Point(131, 440);
+            this.sizeLabel.Location = new System.Drawing.Point(131, 404);
             this.sizeLabel.Margin = new System.Windows.Forms.Padding(0);
             this.sizeLabel.Name = "sizeLabel";
             this.sizeLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -399,7 +398,7 @@
             this.categoryLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categoryLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.categoryLabel.Location = new System.Drawing.Point(209, 251);
+            this.categoryLabel.Location = new System.Drawing.Point(209, 215);
             this.categoryLabel.Margin = new System.Windows.Forms.Padding(0);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -407,36 +406,6 @@
             this.categoryLabel.TabIndex = 0;
             this.categoryLabel.Text = "الفئة";
             this.categoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(158, 651);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(117, 32);
-            this.saveBtn.TabIndex = 2;
-            this.saveBtn.Text = "حفظ";
-            this.saveBtn.UseVisualStyleBackColor = false;
-            // 
-            // cancelBtn
-            // 
-            this.cancelBtn.BackColor = System.Drawing.Color.Transparent;
-            this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.cancelBtn.FlatAppearance.BorderSize = 2;
-            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.cancelBtn.Location = new System.Drawing.Point(26, 651);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(119, 32);
-            this.cancelBtn.TabIndex = 2;
-            this.cancelBtn.Text = "الغاء";
-            this.cancelBtn.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -459,19 +428,19 @@
             this.panel2.Size = new System.Drawing.Size(989, 100);
             this.panel2.TabIndex = 3;
             // 
-            // addBtn
+            // deleteBtn
             // 
-            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBtn.ForeColor = System.Drawing.Color.White;
-            this.addBtn.Location = new System.Drawing.Point(181, 39);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(89, 32);
-            this.addBtn.TabIndex = 2;
-            this.addBtn.Text = "اضافة";
-            this.addBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.Location = new System.Drawing.Point(13, 39);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(76, 32);
+            this.deleteBtn.TabIndex = 2;
+            this.deleteBtn.Text = "حذف";
+            this.deleteBtn.UseVisualStyleBackColor = false;
             // 
             // updateBtn
             // 
@@ -501,6 +470,20 @@
             this.searchBtn.Text = "بحث";
             this.searchBtn.UseVisualStyleBackColor = false;
             // 
+            // addBtn
+            // 
+            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.White;
+            this.addBtn.Location = new System.Drawing.Point(181, 39);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(89, 32);
+            this.addBtn.TabIndex = 2;
+            this.addBtn.Text = "اضافة";
+            this.addBtn.UseVisualStyleBackColor = false;
+            // 
             // searchTxt
             // 
             this.searchTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
@@ -511,20 +494,6 @@
             this.searchTxt.Size = new System.Drawing.Size(535, 28);
             this.searchTxt.TabIndex = 1;
             this.searchTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(13, 39);
-            this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(76, 32);
-            this.deleteBtn.TabIndex = 2;
-            this.deleteBtn.Text = "حذف";
-            this.deleteBtn.UseVisualStyleBackColor = false;
             // 
             // itemsDataGridView
             // 
@@ -565,7 +534,7 @@
             this.itemsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.itemsDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.itemsDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            this.itemsDataGridView.Location = new System.Drawing.Point(0, 278);
+            this.itemsDataGridView.Location = new System.Drawing.Point(0, 212);
             this.itemsDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.itemsDataGridView.Name = "itemsDataGridView";
             this.itemsDataGridView.ReadOnly = true;
@@ -595,7 +564,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1291, 766);
+            this.ClientSize = new System.Drawing.Size(1291, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.itemsDataGridView);
             this.Controls.Add(this.panel1);
@@ -637,10 +606,8 @@
         private System.Windows.Forms.TextBox supplierTxt;
         private System.Windows.Forms.Label quantityLabel;
         private System.Windows.Forms.TextBox itemTxt;
-        private System.Windows.Forms.TextBox idTxt;
         private System.Windows.Forms.Label itemLabel;
         private System.Windows.Forms.Label supplierLabel;
-        private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Label sizeLabel;
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label categoryLabel;
