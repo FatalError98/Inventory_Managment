@@ -38,21 +38,21 @@ namespace Inventory.Presenters
 
         private void ActiveButton(object sender, EventArgs e)
         {
+            
             if (sender != null)
             {
                 if (_currentButton != sender)
                 {
                     DisableButton(_currentButton);
-                    _currentButton = sender as Button;
+                    _currentButton = (Button)sender;
 
                     //Null Safety Check Wont be null but C# like it
             if (_currentButton != null)
                     {
-                        Color color = ColorTranslator.FromHtml(ThemeColor.myColor);
-                        _currentButton.BackColor = color;
+                        //Color color = ColorTranslator.FromHtml(ThemeColor.myColor);
+                        _currentButton.BackColor = Color.FromArgb(116,86,174);
                         _currentButton.ForeColor = Color.White;
-                        _currentButton.Font = new System.Drawing.Font("Tajawal", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
+                        _currentButton.Font = new System.Drawing.Font("Tajawal", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     }
 
                 }
@@ -64,8 +64,8 @@ namespace Inventory.Presenters
             //Null Safety Check Wont be null but C# like it
             if (previousBtn != null)
             {
-                previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                previousBtn.ForeColor = Color.GhostWhite;
+                previousBtn.BackColor = Color.White;
+                previousBtn.ForeColor = Color.Black;
                 previousBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }

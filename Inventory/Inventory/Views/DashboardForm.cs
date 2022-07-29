@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using Inventory.Theme;
 using Inventory.Views;
 
@@ -25,26 +25,41 @@ namespace Inventory
             {
                 ShowItemView?.Invoke(this, EventArgs.Empty);
                 ChangeActiveButtonColor?.Invoke(addItemBtn, EventArgs.Empty);
+
+                titleLabel.Text = addItemBtn.Text;
+
             };
             transferItemBtn.Click += delegate 
             { 
                 ShowTransmissionView?.Invoke(this, EventArgs.Empty); 
-                ChangeActiveButtonColor?.Invoke(transferItemBtn, EventArgs.Empty); 
+                ChangeActiveButtonColor?.Invoke(transferItemBtn, EventArgs.Empty);
+
+                titleLabel.Text = transferItemBtn.Text;
+
             };
             inventoryBtn.Click += delegate 
             {
                 ShowInventoryView?.Invoke(this, EventArgs.Empty); 
-                ChangeActiveButtonColor?.Invoke(inventoryBtn, EventArgs.Empty); 
+                ChangeActiveButtonColor?.Invoke(inventoryBtn, EventArgs.Empty);
+
+                titleLabel.Text = inventoryBtn.Text;
+
             };
             usersBtn.Click += delegate 
             {
                 ShowUsersView?.Invoke(this, EventArgs.Empty); 
-                ChangeActiveButtonColor?.Invoke(usersBtn, EventArgs.Empty); 
+                ChangeActiveButtonColor?.Invoke(usersBtn, EventArgs.Empty);
+
+                titleLabel.Text = usersBtn.Text;
+
             };
             settingsBtn.Click += delegate 
             { 
                 ShowSettingsView?.Invoke(this, EventArgs.Empty); 
-                ChangeActiveButtonColor?.Invoke(settingsBtn, EventArgs.Empty); 
+                ChangeActiveButtonColor?.Invoke(settingsBtn, EventArgs.Empty);
+
+                titleLabel.Text = settingsBtn.Text;
+
             };
 
         }
@@ -57,55 +72,24 @@ namespace Inventory
         //Event To Change the Button color as presserd
         public event EventHandler ChangeActiveButtonColor;
 
-      
-        // Methods
-
-        ////Method to open form in a contianer Panel
-        //private void OpenChildForm(Form childForm, object btnSender)
-        //{
-        //    if(activeForm != null)
-        //    {
-        //      activeForm.Close();
-        //    }
-        //    ActiveButton(btnSender);
-        //    activeForm = childForm;
-        //    childForm.TopLevel = false;
-        //    childForm.FormBorderStyle = FormBorderStyle.None;
-        //    childForm.Dock = DockStyle.Fill;
-        //    this.desktopPanel.Controls.Add(childForm);
-        //    this.desktopPanel.Tag = childForm;
-        //    childForm.BringToFront();
-        //    childForm.Show();
-        //    titleLabel.Text = childForm.Text;
-        //}
-
         private void btnSettings_Click(object sender, EventArgs e)
         {
         }
-
         private void DashboardFrom_Load(object sender, EventArgs e)
         {
         }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void addItemBtn_Click(object sender, EventArgs e)
         {
 
         }
-
         private void transferItemBtn_Click(object sender, EventArgs e)
         {
 
         }
-
         private void inventoryBtn_Click(object sender, EventArgs e)
         {
 
         }
-
         private void usersBtn_Click(object sender, EventArgs e)
         {
 

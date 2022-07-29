@@ -15,7 +15,6 @@ namespace Inventory.Views
         string UserPassword { get; set; }
         string UserRole { get; set; }   
         string SearchValue { get; set; }   
-        bool IsAdmin { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }
         string Message { get; set; }

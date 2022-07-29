@@ -15,7 +15,6 @@ namespace Inventory.Views
         private string message;
         private bool isSuccessful;
         private bool isEdit;
-        private bool isAdmin;
 
         public string UserId 
         {
@@ -41,11 +40,6 @@ namespace Inventory.Views
         {
             get { return searchTxt.Text; }
             set { searchTxt.Text = value; }
-        }
-        public bool IsAdmin
-        {
-            get { return isAdmin; }
-            set { isAdmin = value; }
         }
         public bool IsEdit 
         {
@@ -169,5 +163,19 @@ namespace Inventory.Views
             return instance;
         }
 
+        private void searchTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userNameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
