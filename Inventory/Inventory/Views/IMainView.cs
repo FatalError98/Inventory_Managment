@@ -12,6 +12,8 @@ namespace Inventory.Views
         event EventHandler ShowTransmissionView;
         event EventHandler ShowInventoryView;
         event EventHandler ShowUsersView;          
-        event EventHandler ShowSettingsView;       
+        event EventHandler ShowSettingsView;
+
+        event EventHandler ChangeActiveButtonColor;
     }
 }
