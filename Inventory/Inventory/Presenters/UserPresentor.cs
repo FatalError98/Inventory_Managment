@@ -17,7 +17,7 @@ namespace Inventory.Presenters
         private IUserView _userView;
         private IUsersRepository _usersRepository;
         private BindingSource _userBindingSource;
-        private IEnumerable<UserModel> _users;
+        private IEnumerable<UserModel> _usersModel;
 
         //Constructor
         public UserPresentor (IUserView userView, IUsersRepository usersRepository)
@@ -49,17 +49,17 @@ namespace Inventory.Presenters
         //Methods
         private void LoadAllUserList()
         {
-            _users = _usersRepository.GetAll();
-            _userBindingSource.DataSource = _users;
+            _usersModel = _usersRepository.GetAll();
+            _userBindingSource.DataSource = _usersModel;
         }
         private void SearchUser(object sender, EventArgs e)
         {
             bool emptyValues = _userView.SearchValue == "";
             if (emptyValues != true)
-                _users = _usersRepository.GetByvalue(_userView.SearchValue);
+                _usersModel = _usersRepository.GetByvalue(_userView.SearchValue);
             else
-                _users = _usersRepository.GetAll();
-            _userBindingSource.DataSource = _users;
+                _usersModel = _usersRepository.GetAll();
+            _userBindingSource.DataSource = _usersModel;
         }
 
         private void CancelAction(object sender, EventArgs e)
@@ -100,7 +100,6 @@ namespace Inventory.Presenters
 
         private void CleanViewFields()
         {
-            _userView.UserId = "";
             _userView.UserName = "";
             _userView.UserPassword = "";
             _userView.UserRole = "";
@@ -126,7 +125,7 @@ namespace Inventory.Presenters
         private void LoadSelectedUsersToEdit(object sender, EventArgs e)
         {
             var users = (UserModel)_userBindingSource.Current;
-            _userView.UserId = users.Id.ToString();
+            _userView.UserId = users.Id;
             _userView.UserName = users.Name.ToString();
             _userView.UserPassword = users.Password.ToString();
             _userView.UserRole = users.Role.ToString();

@@ -9,6 +9,7 @@ using System.Drawing;
 // 
 using Inventory.Views;
 using Inventory.Model;
+using Inventory.Models;
 using Inventory._Repositories;
 using Inventory.Theme;
 
@@ -27,8 +28,18 @@ namespace Inventory.Presenters
             _sqlConnectionString = sqlConnectionString;
 
             _mainView.ShowUsersView += ShowUserView;
+            _mainView.ShowItemView += ShowItemView;
+
             _mainView.ChangeActiveButtonColor += ActiveButton;
         }
+
+        private void ShowItemView(object sender, EventArgs e)
+        {
+            IItemView view = new ItemForm();
+            //IItemRepository repository = new ItemRepository(_sqlConnectionString);
+            //new ItemPresentor(view, repository);
+        }
+
         private void ShowUserView(object sender, EventArgs e)
         {
             IUserView view = UsersForm.GetInstance((DashboardForm)_mainView);

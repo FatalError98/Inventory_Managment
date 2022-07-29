@@ -29,8 +29,7 @@ namespace Inventory
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ConnectionString;
             IMainView view = new DashboardForm();
             new MainPresentor(view, sqlConnectionString);
-    
-
+            //
             Application.Run((Form)view);
         }
     }

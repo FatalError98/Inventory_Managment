@@ -15,11 +15,12 @@ namespace Inventory.Views
         private string message;
         private bool isSuccessful;
         private bool isEdit;
+        private int userId;
 
-        public string UserId 
+        public int UserId 
         {
-            get { return idTxt.Text; }
-            set { idTxt.Text = value; }
+            get { return userId; }
+            set {userId = value; }
         }
         public string UserName 
         {

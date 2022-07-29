@@ -3,23 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace Inventory.Views
 {
-    public interface IUserView
+    public interface IItemView
     {
         // Properties - Fields
-        int UserId { get; set; }
-        string UserName { get; set; }
-        string UserPassword { get; set; }
-        string UserRole { get; set; }   
-        string SearchValue { get; set; }   
+        string ItemId { get; set; }
+        string ItemName { get; set; }   
+        string ItemSupplier { get; set; }
+        string ItemCategory { get; set; }
+        string ItemSize { get; set; }   
+        int ItemContain { get; set; }
+        int ItemQuantity { get; set; }
+        double ItemPrice { get; set; }
+        double TotalPrice { get; set; }
+        DateTime DateTime { get; set; }
+        string Description { get; set; }
+        string SearchValue { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }
         string Message { get; set; }
 
-        // Events
+        //Events
         event EventHandler SearchEvent;
         event EventHandler AddEvent;
         event EventHandler EditEvent;
@@ -28,7 +36,7 @@ namespace Inventory.Views
         event EventHandler CancelEvent;
 
         //Methods
-        void SetUserListBindingSource(BindingSource userList);
+        void SetItemBindingSource(BindingSource itemsSource);
         void Show();
     }
 }
