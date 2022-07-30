@@ -29,8 +29,16 @@ namespace Inventory.Presenters
 
             _mainView.ShowUsersView += ShowUserView;
             _mainView.ShowItemView += ShowItemView;
+            _mainView.ShowTransmissionView += ShowTransmissionView;
 
             _mainView.ChangeActiveButtonColor += ActiveButton;
+        }
+
+        private void ShowTransmissionView(object sender, EventArgs e)
+        {
+            ITransmissionView view = new TransmissionForm();
+            ITransmissionRepository repository = new TransmissionRepository(_sqlConnectionString);
+            new TransmissionPresentor(view, repository);
         }
 
         private void ShowItemView(object sender, EventArgs e)

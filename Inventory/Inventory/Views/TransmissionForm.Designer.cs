@@ -41,8 +41,10 @@
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.transmissionItemDataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addUpdateTapControl = new System.Windows.Forms.TabControl();
-            this.addUpdatePage = new System.Windows.Forms.TabPage();
+            this.transmissionUpdateTapControl = new System.Windows.Forms.TabControl();
+            this.transmissionUpdatePage = new System.Windows.Forms.TabPage();
+            this.buildingComboBox = new System.Windows.Forms.ComboBox();
+            this.departmentComboBox = new System.Windows.Forms.ComboBox();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.dateLabel = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -53,18 +55,16 @@
             this.descriptionTxt = new System.Windows.Forms.TextBox();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.itemTxt = new System.Windows.Forms.TextBox();
+            this.buildingLabel = new System.Windows.Forms.Label();
             this.itemLabel = new System.Windows.Forms.Label();
             this.departmentLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.departmentComboBox = new System.Windows.Forms.ComboBox();
-            this.buildingLabel = new System.Windows.Forms.Label();
-            this.buildingComboBox = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transmissionItemDataGridView)).BeginInit();
-            this.addUpdateTapControl.SuspendLayout();
-            this.addUpdatePage.SuspendLayout();
+            this.transmissionUpdateTapControl.SuspendLayout();
+            this.transmissionUpdatePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -224,45 +224,67 @@
             this.panel1.Size = new System.Drawing.Size(979, 176);
             this.panel1.TabIndex = 6;
             // 
-            // addUpdateTapControl
+            // transmissionUpdateTapControl
             // 
-            this.addUpdateTapControl.Controls.Add(this.addUpdatePage);
-            this.addUpdateTapControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.addUpdateTapControl.Location = new System.Drawing.Point(989, 0);
-            this.addUpdateTapControl.Margin = new System.Windows.Forms.Padding(0);
-            this.addUpdateTapControl.Name = "addUpdateTapControl";
-            this.addUpdateTapControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.addUpdateTapControl.RightToLeftLayout = true;
-            this.addUpdateTapControl.SelectedIndex = 0;
-            this.addUpdateTapControl.Size = new System.Drawing.Size(302, 700);
-            this.addUpdateTapControl.TabIndex = 5;
+            this.transmissionUpdateTapControl.Controls.Add(this.transmissionUpdatePage);
+            this.transmissionUpdateTapControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.transmissionUpdateTapControl.Location = new System.Drawing.Point(989, 0);
+            this.transmissionUpdateTapControl.Margin = new System.Windows.Forms.Padding(0);
+            this.transmissionUpdateTapControl.Name = "transmissionUpdateTapControl";
+            this.transmissionUpdateTapControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.transmissionUpdateTapControl.RightToLeftLayout = true;
+            this.transmissionUpdateTapControl.SelectedIndex = 0;
+            this.transmissionUpdateTapControl.Size = new System.Drawing.Size(302, 700);
+            this.transmissionUpdateTapControl.TabIndex = 5;
             // 
-            // addUpdatePage
+            // transmissionUpdatePage
             // 
-            this.addUpdatePage.BackColor = System.Drawing.Color.White;
-            this.addUpdatePage.Controls.Add(this.buildingComboBox);
-            this.addUpdatePage.Controls.Add(this.departmentComboBox);
-            this.addUpdatePage.Controls.Add(this.cancelBtn);
-            this.addUpdatePage.Controls.Add(this.dateLabel);
-            this.addUpdatePage.Controls.Add(this.dateTimePicker);
-            this.addUpdatePage.Controls.Add(this.saveBtn);
-            this.addUpdatePage.Controls.Add(this.descriptionLabel);
-            this.addUpdatePage.Controls.Add(this.quantityNumUpDown);
-            this.addUpdatePage.Controls.Add(this.categoryTxt);
-            this.addUpdatePage.Controls.Add(this.descriptionTxt);
-            this.addUpdatePage.Controls.Add(this.quantityLabel);
-            this.addUpdatePage.Controls.Add(this.itemTxt);
-            this.addUpdatePage.Controls.Add(this.buildingLabel);
-            this.addUpdatePage.Controls.Add(this.itemLabel);
-            this.addUpdatePage.Controls.Add(this.departmentLabel);
-            this.addUpdatePage.Controls.Add(this.titleLabel);
-            this.addUpdatePage.Controls.Add(this.categoryLabel);
-            this.addUpdatePage.Location = new System.Drawing.Point(4, 22);
-            this.addUpdatePage.Margin = new System.Windows.Forms.Padding(0);
-            this.addUpdatePage.Name = "addUpdatePage";
-            this.addUpdatePage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.addUpdatePage.Size = new System.Drawing.Size(294, 674);
-            this.addUpdatePage.TabIndex = 0;
+            this.transmissionUpdatePage.BackColor = System.Drawing.Color.White;
+            this.transmissionUpdatePage.Controls.Add(this.buildingComboBox);
+            this.transmissionUpdatePage.Controls.Add(this.departmentComboBox);
+            this.transmissionUpdatePage.Controls.Add(this.cancelBtn);
+            this.transmissionUpdatePage.Controls.Add(this.dateLabel);
+            this.transmissionUpdatePage.Controls.Add(this.dateTimePicker);
+            this.transmissionUpdatePage.Controls.Add(this.saveBtn);
+            this.transmissionUpdatePage.Controls.Add(this.descriptionLabel);
+            this.transmissionUpdatePage.Controls.Add(this.quantityNumUpDown);
+            this.transmissionUpdatePage.Controls.Add(this.categoryTxt);
+            this.transmissionUpdatePage.Controls.Add(this.descriptionTxt);
+            this.transmissionUpdatePage.Controls.Add(this.quantityLabel);
+            this.transmissionUpdatePage.Controls.Add(this.itemTxt);
+            this.transmissionUpdatePage.Controls.Add(this.buildingLabel);
+            this.transmissionUpdatePage.Controls.Add(this.itemLabel);
+            this.transmissionUpdatePage.Controls.Add(this.departmentLabel);
+            this.transmissionUpdatePage.Controls.Add(this.titleLabel);
+            this.transmissionUpdatePage.Controls.Add(this.categoryLabel);
+            this.transmissionUpdatePage.Location = new System.Drawing.Point(4, 22);
+            this.transmissionUpdatePage.Margin = new System.Windows.Forms.Padding(0);
+            this.transmissionUpdatePage.Name = "transmissionUpdatePage";
+            this.transmissionUpdatePage.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.transmissionUpdatePage.Size = new System.Drawing.Size(294, 674);
+            this.transmissionUpdatePage.TabIndex = 0;
+            // 
+            // buildingComboBox
+            // 
+            this.buildingComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            this.buildingComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buildingComboBox.Font = new System.Drawing.Font("Tajawal", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildingComboBox.FormattingEnabled = true;
+            this.buildingComboBox.Location = new System.Drawing.Point(26, 249);
+            this.buildingComboBox.Name = "buildingComboBox";
+            this.buildingComboBox.Size = new System.Drawing.Size(157, 31);
+            this.buildingComboBox.TabIndex = 4;
+            // 
+            // departmentComboBox
+            // 
+            this.departmentComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            this.departmentComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.departmentComboBox.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.departmentComboBox.FormattingEnabled = true;
+            this.departmentComboBox.Location = new System.Drawing.Point(26, 316);
+            this.departmentComboBox.Name = "departmentComboBox";
+            this.departmentComboBox.Size = new System.Drawing.Size(251, 34);
+            this.departmentComboBox.TabIndex = 5;
             // 
             // cancelBtn
             // 
@@ -276,7 +298,7 @@
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(0);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(119, 31);
-            this.cancelBtn.TabIndex = 11;
+            this.cancelBtn.TabIndex = 9;
             this.cancelBtn.Text = "الغاء";
             this.cancelBtn.UseVisualStyleBackColor = false;
             // 
@@ -316,7 +338,7 @@
             this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(117, 31);
-            this.saveBtn.TabIndex = 10;
+            this.saveBtn.TabIndex = 8;
             this.saveBtn.Text = "حفظ";
             this.saveBtn.UseVisualStyleBackColor = false;
             // 
@@ -350,7 +372,7 @@
             0});
             this.quantityNumUpDown.Name = "quantityNumUpDown";
             this.quantityNumUpDown.Size = new System.Drawing.Size(83, 27);
-            this.quantityNumUpDown.TabIndex = 4;
+            this.quantityNumUpDown.TabIndex = 3;
             this.quantityNumUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // categoryTxt
@@ -361,7 +383,7 @@
             this.categoryTxt.Location = new System.Drawing.Point(25, 185);
             this.categoryTxt.Name = "categoryTxt";
             this.categoryTxt.Size = new System.Drawing.Size(250, 27);
-            this.categoryTxt.TabIndex = 3;
+            this.categoryTxt.TabIndex = 2;
             this.categoryTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // descriptionTxt
@@ -373,7 +395,7 @@
             this.descriptionTxt.Multiline = true;
             this.descriptionTxt.Name = "descriptionTxt";
             this.descriptionTxt.Size = new System.Drawing.Size(250, 95);
-            this.descriptionTxt.TabIndex = 9;
+            this.descriptionTxt.TabIndex = 7;
             this.descriptionTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // quantityLabel
@@ -402,6 +424,22 @@
             this.itemTxt.Size = new System.Drawing.Size(250, 27);
             this.itemTxt.TabIndex = 1;
             this.itemTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // buildingLabel
+            // 
+            this.buildingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buildingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.buildingLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buildingLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.buildingLabel.Location = new System.Drawing.Point(116, 219);
+            this.buildingLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.buildingLabel.Name = "buildingLabel";
+            this.buildingLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buildingLabel.Size = new System.Drawing.Size(64, 24);
+            this.buildingLabel.TabIndex = 0;
+            this.buildingLabel.Text = "البناية";
+            this.buildingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // itemLabel
             // 
@@ -475,44 +513,6 @@
             this.panel3.Size = new System.Drawing.Size(10, 700);
             this.panel3.TabIndex = 12;
             // 
-            // departmentComboBox
-            // 
-            this.departmentComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            this.departmentComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.departmentComboBox.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.departmentComboBox.FormattingEnabled = true;
-            this.departmentComboBox.Location = new System.Drawing.Point(26, 316);
-            this.departmentComboBox.Name = "departmentComboBox";
-            this.departmentComboBox.Size = new System.Drawing.Size(251, 34);
-            this.departmentComboBox.TabIndex = 12;
-            // 
-            // buildingLabel
-            // 
-            this.buildingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buildingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.buildingLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buildingLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.buildingLabel.Location = new System.Drawing.Point(116, 219);
-            this.buildingLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.buildingLabel.Name = "buildingLabel";
-            this.buildingLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.buildingLabel.Size = new System.Drawing.Size(64, 24);
-            this.buildingLabel.TabIndex = 0;
-            this.buildingLabel.Text = "البناية";
-            this.buildingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // buildingComboBox
-            // 
-            this.buildingComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            this.buildingComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buildingComboBox.Font = new System.Drawing.Font("Tajawal", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingComboBox.FormattingEnabled = true;
-            this.buildingComboBox.Location = new System.Drawing.Point(26, 249);
-            this.buildingComboBox.Name = "buildingComboBox";
-            this.buildingComboBox.Size = new System.Drawing.Size(157, 31);
-            this.buildingComboBox.TabIndex = 12;
-            // 
             // TransmissionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,7 +521,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.transmissionItemDataGridView);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.addUpdateTapControl);
+            this.Controls.Add(this.transmissionUpdateTapControl);
             this.Controls.Add(this.panel3);
             this.Name = "TransmissionForm";
             this.Text = "الاخراج";
@@ -529,9 +529,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transmissionItemDataGridView)).EndInit();
-            this.addUpdateTapControl.ResumeLayout(false);
-            this.addUpdatePage.ResumeLayout(false);
-            this.addUpdatePage.PerformLayout();
+            this.transmissionUpdateTapControl.ResumeLayout(false);
+            this.transmissionUpdatePage.ResumeLayout(false);
+            this.transmissionUpdatePage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumUpDown)).EndInit();
             this.ResumeLayout(false);
 
@@ -547,8 +547,8 @@
         private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.DataGridView transmissionItemDataGridView;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl addUpdateTapControl;
-        private System.Windows.Forms.TabPage addUpdatePage;
+        private System.Windows.Forms.TabControl transmissionUpdateTapControl;
+        private System.Windows.Forms.TabPage transmissionUpdatePage;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
