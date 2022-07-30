@@ -112,7 +112,7 @@ namespace Inventory.Presenters
                 var user = (UserModel)_userBindingSource.Current;
                 _usersRepository.Delete(user.Id);
                 _userView.IsSuccessful = true;
-                _userView.Message = "User Deleteted Successfully";
+                _userView.Message = "تم حذف المستخدم بنجاح";
                 LoadAllUserList();
             }
             catch (Exception ex)

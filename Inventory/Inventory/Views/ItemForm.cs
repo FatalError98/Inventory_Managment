@@ -16,7 +16,7 @@ namespace Inventory.Views
         private bool isSuccessful;
         private bool isEdit;
         private double totalPrice;
-        private int itemId;
+        private int itemId = 0;
         private static ItemForm instance;
         public ItemForm()
         {
@@ -68,13 +68,13 @@ namespace Inventory.Views
         }
         public double TotalPrice 
         { 
-            get => totalPrice;
-            set =>  totalPrice = Convert.ToDouble(priceTxt.Text) * (int)quantityNumUpDown.Value;            
+            get => totalPrice = Convert.ToDouble(priceTxt.Text) * Convert.ToDouble(quantityNumUpDown.Value);
+            set =>  totalPrice = value;            
         }
-        public DateTime DateTime 
+        public string DateTime 
         { 
-            get => dateTimePicker.MinDate; 
-            set => dateTimePicker.MinDate = value; 
+            get => dateTimePicker.Text; 
+            set => dateTimePicker.Text = value; 
         }
         public string Description 
         { 

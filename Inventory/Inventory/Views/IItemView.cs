@@ -20,7 +20,7 @@ namespace Inventory.Views
         int ItemQuantity { get; set; }
         double ItemPrice { get; set; }
         double TotalPrice { get; set; }
-        DateTime DateTime { get; set; }
+        string DateTime { get; set; }
         string Description { get; set; }
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
