@@ -15,5 +15,7 @@ namespace Inventory.Views
         event EventHandler ShowSettingsView;
 
         event EventHandler ChangeActiveButtonColor;
+
+        void Show();
     }
 }

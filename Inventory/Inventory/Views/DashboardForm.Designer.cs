@@ -72,7 +72,6 @@
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.addItemBtn.Image = global::Inventory.Properties.Resources.Asset_6;
             this.addItemBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.addItemBtn.Location = new System.Drawing.Point(0, 0);
             this.addItemBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -93,7 +92,6 @@
             this.transferItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.transferItemBtn.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transferItemBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.transferItemBtn.Image = global::Inventory.Properties.Resources.Asset_6;
             this.transferItemBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.transferItemBtn.Location = new System.Drawing.Point(0, 60);
             this.transferItemBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -114,7 +112,6 @@
             this.inventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inventoryBtn.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.inventoryBtn.Image = global::Inventory.Properties.Resources.Asset_6;
             this.inventoryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.inventoryBtn.Location = new System.Drawing.Point(0, 126);
             this.inventoryBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -135,7 +132,6 @@
             this.usersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usersBtn.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.usersBtn.Image = global::Inventory.Properties.Resources.Asset_6;
             this.usersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.usersBtn.Location = new System.Drawing.Point(0, 186);
             this.usersBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -157,7 +153,6 @@
             this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsBtn.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.settingsBtn.Image = global::Inventory.Properties.Resources.Asset_6;
             this.settingsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.settingsBtn.Location = new System.Drawing.Point(0, 246);
             this.settingsBtn.Margin = new System.Windows.Forms.Padding(0);

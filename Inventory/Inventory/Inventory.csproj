@@ -64,6 +64,7 @@
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\IItemView.cs" />
+    <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Views\IMainView.cs" />
     <Compile Include="Views\InventoryForm.cs">
       <SubType>Form</SubType>
@@ -160,6 +161,10 @@
     <Folder Include="Assets\Fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Images\Sign in-amico.png" />
+    <None Include="Assets\Icons\exit.png" />
+    <None Include="Assets\Icons\max.png" />
+    <None Include="Assets\Icons\Min.png" />
     <Content Include="Assets\Images\500px.png" />
     <Content Include="Assets\Images\Asset 6.png" />
   </ItemGroup>

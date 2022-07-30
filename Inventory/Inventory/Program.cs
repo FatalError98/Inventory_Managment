@@ -30,7 +30,7 @@ namespace Inventory
             IMainView view = new DashboardForm();
             new MainPresentor(view, sqlConnectionString);
             //
-            Application.Run((Form)view);
+            Application.Run(new LoginFrom());
         }
     }
 }
