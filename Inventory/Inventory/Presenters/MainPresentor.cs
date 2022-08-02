@@ -31,12 +31,23 @@ namespace Inventory.Presenters
             _mainView.ShowUsersView += ShowUserView;
             _mainView.ShowItemView += ShowItemView;
             _mainView.ShowTransmissionView += ShowTransmissionView;
+            _mainView.ShowSettingsView += ShowSettingsView;
+            _mainView.ShowInventoryView += ShowInventoryView;
 
             _mainView.ChangeActiveButtonColor += ActiveButton;
             _mainView.Show();
         }
 
+        private void ShowInventoryView(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void ShowSettingsView(object sender, EventArgs e)
+        {
+            ISettingsView view = new SettingsForm();
+            new SettingsPresentor(view);
+        }
 
         private void ShowTransmissionView(object sender, EventArgs e)
         {
