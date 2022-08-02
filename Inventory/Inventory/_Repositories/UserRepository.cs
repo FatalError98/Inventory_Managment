@@ -121,5 +121,42 @@ namespace Inventory._Repositories
                 command.ExecuteNonQuery();
             }
         }
+
+        public bool GetByUserAndPassword(string name, string password)
+        {
+            var userList = new List<UserModel>();
+            bool isLogin;
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = @"Select * FROM Users 
+                                        where UserName = @name And UserPassword = @password";
+                command.Parameters.Add("@name", SqlDbType.VarChar).Value = name;
+                command.Parameters.Add("@password", SqlDbType.VarChar).Value = password;
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var userModel = new UserModel();
+                        userModel.Id = (int)reader[0];
+                        userModel.Name = reader[1].ToString();
+                        userModel.Password = reader[2].ToString();
+                        userModel.Role = reader[3].ToString();
+                        userList.Add(userModel);
+                        
+                    }
+                    if (userList.Count > 0)
+                    {
+                        isLogin = true;
+                    }                       
+                    else
+                        isLogin = false;
+                }
+                return isLogin;
+            }
+        }
     }
 }

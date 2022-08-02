@@ -13,5 +13,7 @@ namespace Inventory.Model
         void Delete(int id);
         IEnumerable<UserModel> GetAll(); // Populate all Data
         IEnumerable<UserModel> GetByvalue(string value); // For Search
+
+        bool GetByUserAndPassword(string name, string password); // Get Data By username and password
     }
 }

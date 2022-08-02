@@ -18,11 +18,9 @@ namespace Inventory.Views
 
         //evnets
         event EventHandler LoginEvent;
-        event EventHandler CloseView;
-        event EventHandler MinimizedView;
-        event EventHandler MaximizedView;
+
 
         //Methods
-        void Show();
+        void Hide();
     }
 }

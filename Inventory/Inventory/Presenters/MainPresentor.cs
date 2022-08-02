@@ -21,6 +21,7 @@ namespace Inventory.Presenters
         private IMainView _mainView;
         private readonly string _sqlConnectionString;
         private Button _currentButton;
+        
 
         public MainPresentor(IMainView mainView, string sqlConnectionString)
         {
@@ -32,7 +33,10 @@ namespace Inventory.Presenters
             _mainView.ShowTransmissionView += ShowTransmissionView;
 
             _mainView.ChangeActiveButtonColor += ActiveButton;
+            _mainView.Show();
         }
+
+
 
         private void ShowTransmissionView(object sender, EventArgs e)
         {
@@ -69,23 +73,24 @@ namespace Inventory.Presenters
             if (_currentButton != null)
                     {
                         //Color color = ColorTranslator.FromHtml(ThemeColor.myColor);
-                        _currentButton.BackColor = Color.FromArgb(116,86,174);
-                        _currentButton.ForeColor = Color.White;
-                        _currentButton.Font = new System.Drawing.Font("Tajawal", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                        _currentButton.ForeColor = Color.FromArgb(116,86,174);
+                        _currentButton.BackColor = Color.White;
+                        _currentButton.FlatAppearance.BorderColor = Color.FromArgb(116, 86, 174);
+                        _currentButton.FlatAppearance.BorderSize = 1;
+                        _currentButton.Font = new System.Drawing.Font("Tajawal", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     }
 
                 }
             }
         }
-
         private void DisableButton(Button previousBtn)
         {
             //Null Safety Check Wont be null but C# like it
             if (previousBtn != null)
             {
-                previousBtn.BackColor = Color.White;
-                previousBtn.ForeColor = Color.Black;
-                previousBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                previousBtn.BackColor = Color.FromArgb(116, 86, 174);
+                previousBtn.ForeColor = Color.White;
+                previousBtn.Font = new System.Drawing.Font("Tajawal", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
     }

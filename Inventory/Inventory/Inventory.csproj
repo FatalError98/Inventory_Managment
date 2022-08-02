@@ -54,6 +54,7 @@
     <Compile Include="Models\TransmissionModel.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
     <Compile Include="Presenters\ItemPresentor.cs" />
+    <Compile Include="Presenters\LoginPresentor.cs" />
     <Compile Include="Presenters\MainPresentor.cs" />
     <Compile Include="Presenters\TransmissionPresentor.cs" />
     <Compile Include="Presenters\UserPresentor.cs" />
@@ -161,10 +162,20 @@
     <Folder Include="Assets\Fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Images\baseline_assignment_white_36dp.png" />
+    <None Include="Assets\Images\baseline_add_box_white_36dp.png" />
+    <None Include="Assets\Images\baseline_settings_white_36dp.png" />
+    <None Include="Assets\Images\baseline_outbox_white_36dp.png" />
+    <None Include="Assets\Images\baseline_list_alt_white_36dp.png" />
+    <None Include="Assets\Images\baseline_manage_accounts_white_36dp.png" />
+    <None Include="Assets\Images\baseline_settings_white_24dp.png" />
+    <None Include="Assets\Images\baseline_settings_white_48dp.png" />
+    <None Include="Assets\Images\Fitting piece-amico.png" />
     <None Include="Assets\Images\Sign in-amico.png" />
     <None Include="Assets\Icons\exit.png" />
     <None Include="Assets\Icons\max.png" />
     <None Include="Assets\Icons\Min.png" />
+    <None Include="Assets\Images\1x\baseline_manage_accounts_white_36dp.png" />
     <Content Include="Assets\Images\500px.png" />
     <Content Include="Assets\Images\Asset 6.png" />
   </ItemGroup>

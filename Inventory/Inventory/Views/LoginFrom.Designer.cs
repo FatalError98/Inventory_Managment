@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.userNameLabel = new System.Windows.Forms.Label();
             this.userNameTxt = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
@@ -37,25 +36,8 @@
             this.programmerLabel = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.minimizedBtn = new System.Windows.Forms.Button();
-            this.maximizedBtn = new System.Windows.Forms.Button();
-            this.exitBtn = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.minimizedBtn);
-            this.panel1.Controls.Add(this.maximizedBtn);
-            this.panel1.Controls.Add(this.exitBtn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 31);
-            this.panel1.TabIndex = 0;
             // 
             // userNameLabel
             // 
@@ -84,7 +66,7 @@
             this.userNameTxt.Margin = new System.Windows.Forms.Padding(0);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.Size = new System.Drawing.Size(271, 30);
-            this.userNameTxt.TabIndex = 3;
+            this.userNameTxt.TabIndex = 1;
             this.userNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // passwordLabel
@@ -115,7 +97,7 @@
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(271, 30);
-            this.passwordTxt.TabIndex = 3;
+            this.passwordTxt.TabIndex = 2;
             this.passwordTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SignInBtn
@@ -126,10 +108,10 @@
             this.SignInBtn.FlatAppearance.BorderSize = 0;
             this.SignInBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInBtn.ForeColor = System.Drawing.Color.White;
-            this.SignInBtn.Location = new System.Drawing.Point(105, 515);
+            this.SignInBtn.Location = new System.Drawing.Point(105, 511);
             this.SignInBtn.Name = "SignInBtn";
             this.SignInBtn.Size = new System.Drawing.Size(132, 42);
-            this.SignInBtn.TabIndex = 4;
+            this.SignInBtn.TabIndex = 3;
             this.SignInBtn.Text = "تسجيل دخول";
             this.SignInBtn.UseVisualStyleBackColor = false;
             // 
@@ -167,64 +149,15 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Inventory.Properties.Resources.Sign_in_amico;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(342, 276);
+            this.pictureBox1.Size = new System.Drawing.Size(342, 302);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // minimizedBtn
-            // 
-            this.minimizedBtn.BackColor = System.Drawing.Color.Transparent;
-            this.minimizedBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.minimizedBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.minimizedBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.minimizedBtn.FlatAppearance.BorderSize = 0;
-            this.minimizedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizedBtn.Image = global::Inventory.Properties.Resources.Min;
-            this.minimizedBtn.Location = new System.Drawing.Point(267, 0);
-            this.minimizedBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.minimizedBtn.Name = "minimizedBtn";
-            this.minimizedBtn.Size = new System.Drawing.Size(25, 31);
-            this.minimizedBtn.TabIndex = 0;
-            this.minimizedBtn.UseVisualStyleBackColor = false;
-            // 
-            // maximizedBtn
-            // 
-            this.maximizedBtn.BackColor = System.Drawing.Color.Transparent;
-            this.maximizedBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.maximizedBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.maximizedBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.maximizedBtn.FlatAppearance.BorderSize = 0;
-            this.maximizedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maximizedBtn.Image = global::Inventory.Properties.Resources.max;
-            this.maximizedBtn.Location = new System.Drawing.Point(292, 0);
-            this.maximizedBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.maximizedBtn.Name = "maximizedBtn";
-            this.maximizedBtn.Size = new System.Drawing.Size(25, 31);
-            this.maximizedBtn.TabIndex = 0;
-            this.maximizedBtn.UseVisualStyleBackColor = false;
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.BackColor = System.Drawing.Color.Transparent;
-            this.exitBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitBtn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.exitBtn.FlatAppearance.BorderSize = 0;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Image = global::Inventory.Properties.Resources.exit;
-            this.exitBtn.Location = new System.Drawing.Point(317, 0);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(25, 31);
-            this.exitBtn.TabIndex = 0;
-            this.exitBtn.UseVisualStyleBackColor = false;
             // 
             // LoginFrom
             // 
@@ -240,15 +173,13 @@
             this.Controls.Add(this.userNameTxt);
             this.Controls.Add(this.userNameLabel);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginFrom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginFrom";
+            this.Text = "تسجيل الدخول";
             this.Load += new System.EventHandler(this.LoginFrom_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,11 +187,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button minimizedBtn;
-        private System.Windows.Forms.Button maximizedBtn;
-        private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.TextBox userNameTxt;

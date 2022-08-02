@@ -8,6 +8,7 @@ namespace Inventory.Views
 {
     public interface IMainView
     {
+
         event EventHandler ShowItemView;
         event EventHandler ShowTransmissionView;
         event EventHandler ShowInventoryView;

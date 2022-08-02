@@ -16,17 +16,18 @@ namespace Inventory
     public partial class DashboardForm : Form, IMainView
     {
 
+
+
         //Constractor
         public DashboardForm()
         {
             InitializeComponent();
-
             addItemBtn.Click += delegate 
             {
                 ShowItemView?.Invoke(this, EventArgs.Empty);
                 ChangeActiveButtonColor?.Invoke(addItemBtn, EventArgs.Empty);
 
-                titleLabel.Text = addItemBtn.Text;
+
 
             };
             transferItemBtn.Click += delegate 
@@ -34,7 +35,6 @@ namespace Inventory
                 ShowTransmissionView?.Invoke(this, EventArgs.Empty); 
                 ChangeActiveButtonColor?.Invoke(transferItemBtn, EventArgs.Empty);
 
-                titleLabel.Text = transferItemBtn.Text;
 
             };
             inventoryBtn.Click += delegate 
@@ -42,7 +42,7 @@ namespace Inventory
                 ShowInventoryView?.Invoke(this, EventArgs.Empty); 
                 ChangeActiveButtonColor?.Invoke(inventoryBtn, EventArgs.Empty);
 
-                titleLabel.Text = inventoryBtn.Text;
+
 
             };
             usersBtn.Click += delegate 
@@ -50,7 +50,7 @@ namespace Inventory
                 ShowUsersView?.Invoke(this, EventArgs.Empty); 
                 ChangeActiveButtonColor?.Invoke(usersBtn, EventArgs.Empty);
 
-                titleLabel.Text = usersBtn.Text;
+
 
             };
             settingsBtn.Click += delegate 
@@ -58,7 +58,6 @@ namespace Inventory
                 ShowSettingsView?.Invoke(this, EventArgs.Empty); 
                 ChangeActiveButtonColor?.Invoke(settingsBtn, EventArgs.Empty);
 
-                titleLabel.Text = settingsBtn.Text;
 
             };
 
@@ -69,6 +68,7 @@ namespace Inventory
         public event EventHandler ShowInventoryView;
         public event EventHandler ShowUsersView;
         public event EventHandler ShowSettingsView;
+
         //Event To Change the Button color as presserd
         public event EventHandler ChangeActiveButtonColor;
 

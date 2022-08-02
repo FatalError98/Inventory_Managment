@@ -27,10 +27,13 @@ namespace Inventory
             Application.SetCompatibleTextRenderingDefault(false);
 
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ConnectionString;
-            IMainView view = new DashboardForm();
-            new MainPresentor(view, sqlConnectionString);
-            //
-            Application.Run(new LoginFrom());
+            //IMainView view = new DashboardForm();
+            //new MainPresentor(view, sqlConnectionString);
+
+            ILoginView view = new LoginFrom();
+            new LoginPresentor(view, sqlConnectionString);
+
+            Application.Run((Form)view);
         }
     }
 }

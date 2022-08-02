@@ -48,27 +48,19 @@ namespace Inventory.Views
         }
 
         public event EventHandler LoginEvent;
-        public event EventHandler CloseView;
-        public event EventHandler MinimizedView;
-        public event EventHandler MaximizedView;
+
 
         private void AssociateAndRaiseViewEvent()
         {
-            exitBtn.Click += delegate
-            {
-                CloseView?.Invoke(this, EventArgs.Empty);
-            };
-            minimizedBtn.Click += delegate
-            {
-                MinimizedView?.Invoke(this, EventArgs.Empty);
-            };
-            maximizedBtn.Click += delegate
-            {
-                MaximizedView?.Invoke(this, EventArgs.Empty);
-            };
+
             SignInBtn.Click += delegate
             {
                 LoginEvent?.Invoke(this, EventArgs.Empty);
+            };
+            passwordTxt.KeyDown += (s, e) =>
+            {
+                if(e.KeyCode == Keys.Enter)
+                    LoginEvent?.Invoke(this, EventArgs.Empty);
             };
         }
 
