@@ -5,10 +5,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 
-using Inventory.Model;
+using Inventory.Models;
 using Inventory.Presenters;
 using Inventory._Repositories;
 using Inventory.Views;
+
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
 
 
 
@@ -17,6 +21,7 @@ namespace Inventory
 {
     internal static class Program
     {
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -27,13 +32,16 @@ namespace Inventory
             Application.SetCompatibleTextRenderingDefault(false);
 
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ConnectionString;
-            //IMainView view = new DashboardForm();
-            //new MainPresentor(view, sqlConnectionString);
 
-            ILoginView view = new LoginFrom();
-            new LoginPresentor(view, sqlConnectionString);
+            // String databaseName = "InventoryDb.mdf";
+            // String path = Path.GetFullPath(Environment.CurrentDirectory);
+            // SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\Data\" + databaseName + ";Integrated Security=True");
+            //string SqlConnectionString = Con.ConnectionString;
 
-            Application.Run((Form)view);
+             ILoginView view = new LoginFrom();
+             new LoginPresentor(view, sqlConnectionString);
+
+        Application.Run((Form)view);
         }
     }
 }
