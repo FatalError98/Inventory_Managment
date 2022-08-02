@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 //refrense to Models
-using Inventory.Model;
+using Inventory.Models;
 
 namespace Inventory._Repositories
 {

@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using System.Drawing;
 // 
 using Inventory.Views;
-using Inventory.Model;
 using Inventory.Models;
 using Inventory._Repositories;
 
@@ -52,10 +51,7 @@ namespace Inventory.Presenters
 
         private void Login(object sender, EventArgs e)
         {            
-            bool emptyUser = _loginView.UserName == "";
-            bool emptyPassword = _loginView.Password == "";
-
-            if(emptyUser!= true && emptyPassword != true)
+            if(!string.IsNullOrEmpty(_loginView.UserName) && !string.IsNullOrEmpty(_loginView.Password))
             {
                 IUsersRepository _userRepository = new UserRepository(_sqlConnectionString);
                 _isLoggedIn = _userRepository.GetByUserAndPassword(_loginView.UserName, _loginView.Password);

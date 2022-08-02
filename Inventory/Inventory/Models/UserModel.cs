@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Inventory.Model
+namespace Inventory.Models
 {
     public class UserModel
     {

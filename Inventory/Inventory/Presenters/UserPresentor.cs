@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 // To Use Binding Source
 using System.Windows.Forms;
 //reference to the Model And the view
-using Inventory.Model;
+using Inventory.Models;
 using Inventory.Views;
 
 namespace Inventory.Presenters

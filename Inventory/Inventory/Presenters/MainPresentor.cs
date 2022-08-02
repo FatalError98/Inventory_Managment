@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using System.Drawing;
 // 
 using Inventory.Views;
-using Inventory.Model;
 using Inventory.Models;
 using Inventory._Repositories;
 using Inventory.Theme;

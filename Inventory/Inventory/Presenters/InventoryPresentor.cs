@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 //
 using Inventory.Views;
 using Inventory.Models;
-using Inventory.Model;
 
 namespace Inventory.Presenters
 {

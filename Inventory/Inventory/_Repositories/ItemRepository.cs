@@ -8,7 +8,6 @@ using System.Data;
 using System.Data.SqlClient;
 //refrense to Models
 using Inventory.Models;
-using Inventory.Model;
 namespace Inventory._Repositories
 {
     public class ItemRepository: BaseRepository,  IItemRepository
