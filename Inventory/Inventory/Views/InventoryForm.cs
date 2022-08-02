@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Inventory.Views
 {
-    public partial class InventoryForm : Form
+    public partial class InventoryForm : Form, IInventoryView
     {
         public InventoryForm()
         {

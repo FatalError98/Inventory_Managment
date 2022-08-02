@@ -40,6 +40,8 @@ namespace Inventory.Presenters
 
         private void ShowInventoryView(object sender, EventArgs e)
         {
+            IInventoryView view = new InventoryForm();
+            new InventoryPresentor(view);
             
         }
 

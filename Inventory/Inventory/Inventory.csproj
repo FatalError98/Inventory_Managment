@@ -68,6 +68,7 @@
     <Compile Include="Models\ITransmissionRepository.cs" />
     <Compile Include="Models\TransmissionModel.cs" />
     <Compile Include="Presenters\Common\ModelDataValidation.cs" />
+    <Compile Include="Presenters\InventoryPresentor.cs" />
     <Compile Include="Presenters\ItemPresentor.cs" />
     <Compile Include="Presenters\LoginPresentor.cs" />
     <Compile Include="Presenters\MainPresentor.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Views\DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IInventoryView.cs" />
     <Compile Include="Views\IItemView.cs" />
     <Compile Include="Views\ILoginView.cs" />
     <Compile Include="Views\IMainView.cs" />
