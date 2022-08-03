@@ -447,10 +447,10 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(13, 39);
+            this.deleteBtn.Location = new System.Drawing.Point(9, 39);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(76, 32);
+            this.deleteBtn.Size = new System.Drawing.Size(89, 32);
             this.deleteBtn.TabIndex = 5;
             this.deleteBtn.Text = "حذف";
             this.deleteBtn.UseVisualStyleBackColor = false;
@@ -461,10 +461,10 @@
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(97, 39);
+            this.updateBtn.Location = new System.Drawing.Point(108, 39);
             this.updateBtn.Margin = new System.Windows.Forms.Padding(0);
             this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(76, 32);
+            this.updateBtn.Size = new System.Drawing.Size(89, 32);
             this.updateBtn.TabIndex = 4;
             this.updateBtn.Text = "تحديث";
             this.updateBtn.UseVisualStyleBackColor = false;
@@ -475,7 +475,7 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(846, 39);
+            this.searchBtn.Location = new System.Drawing.Point(851, 39);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(117, 32);
@@ -489,7 +489,7 @@
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addBtn.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
-            this.addBtn.Location = new System.Drawing.Point(181, 39);
+            this.addBtn.Location = new System.Drawing.Point(207, 39);
             this.addBtn.Margin = new System.Windows.Forms.Padding(0);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(89, 32);
@@ -502,7 +502,7 @@
             this.searchTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.searchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchTxt.Font = new System.Drawing.Font("Tajawal", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxt.Location = new System.Drawing.Point(303, 41);
+            this.searchTxt.Location = new System.Drawing.Point(306, 41);
             this.searchTxt.Name = "searchTxt";
             this.searchTxt.Size = new System.Drawing.Size(535, 28);
             this.searchTxt.TabIndex = 2;

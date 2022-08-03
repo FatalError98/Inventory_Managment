@@ -167,5 +167,10 @@ namespace Inventory.Views
         {
 
         }
+
+        private void transmissionUpdatePage_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
