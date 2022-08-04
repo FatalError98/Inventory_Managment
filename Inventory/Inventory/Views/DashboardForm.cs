@@ -77,10 +77,10 @@ namespace Inventory
         }
         private void DashboardFrom_Load(object sender, EventArgs e)
         {
-            inventoryBtn.Enabled = false;
-            settingsBtn.Enabled = false;
-            button1.Enabled = false;
-            usersBtn.Enabled = false;
+            //inventoryBtn.Enabled = false;
+            //settingsBtn.Enabled = false;
+            //button1.Enabled = false;
+            //usersBtn.Enabled = false;
         }
         private void addItemBtn_Click(object sender, EventArgs e)
         {

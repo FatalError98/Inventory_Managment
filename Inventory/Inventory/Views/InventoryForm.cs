@@ -21,5 +21,15 @@ namespace Inventory.Views
         {
 
         }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewComboBoxEditingControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

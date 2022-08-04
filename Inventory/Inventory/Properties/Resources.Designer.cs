@@ -163,6 +163,16 @@ namespace Inventory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Reading_list_rafiki {
+            get {
+                object obj = ResourceManager.GetObject("Reading list-rafiki", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sign_in_amico {
             get {
                 object obj = ResourceManager.GetObject("Sign in-amico", resourceCulture);
