@@ -90,7 +90,6 @@ namespace Inventory.Views
         {
             InitializeComponent();
             AssociateAndRaiseViewEvent();
-            transmissionUpdateTapControl.TabPages.Remove(transmissionUpdatePage);
         }
         private void AssociateAndRaiseViewEvent()
         {
@@ -162,33 +161,22 @@ namespace Inventory.Views
         {
             transmissionItemDataGridView.DataSource = transmissionList;
         }
-        public void SetBuildingBindingSource(BindingSource buildingList)
-        {
-            buildingComboBox.DataSource = buildingList;
-        }
-
-        public void SetDepartmentBindingSource(BindingSource DepartmentList)
-        {
-            departmentComboBox.DataSource = DepartmentList;
-        }
-
         private void TransmissionForm_Load(object sender, EventArgs e)
         {
 
         }
-
         private void transmissionUpdatePage_Click(object sender, EventArgs e)
         {
 
         }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (consumableRadioButton.Checked)
                 consumable = "مستهلك";
             if (notConsumableRadioButton.Checked)
                 consumable = "غير مستهلك";
-
         }
+
+
     }
 }

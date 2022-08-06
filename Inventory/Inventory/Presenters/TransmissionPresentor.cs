@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,15 +16,15 @@ namespace Inventory.Presenters
     {
         private ITransmissionView _transmissionView;
         private ITransmissionRepository _transmissionRepository;
-        private BindingSource _transmissionBindingSource;
-        private BindingSource _buildingBindingSource;
-        private BindingSource _departmentBindingSource;
+        private BindingSource _transmissionBindingSource;     
         private IEnumerable<TransmissionModel> _transmissionModels;
+
+
+
         public TransmissionPresentor(ITransmissionView transmissionView, ITransmissionRepository treansmissionRepository)
         {
             _transmissionBindingSource = new BindingSource();
-            _buildingBindingSource = new BindingSource();
-            _departmentBindingSource = new BindingSource();
+
             _transmissionView = transmissionView;
             _transmissionRepository = treansmissionRepository;
 
@@ -37,14 +38,14 @@ namespace Inventory.Presenters
 
             //set transmission Binding source
             _transmissionView.SetTransmissionBindingSource(_transmissionBindingSource);
-            _transmissionView.SetBuildingBindingSource(_buildingBindingSource);
-            _transmissionView.SetDepartmentBindingSource(_departmentBindingSource);
 
             //Load all data
             LoadAllTransmission();
 
             transmissionView.Show();
         }
+
+
         //Methods
         private void SearchTransmission(object sender, EventArgs e)
         {
@@ -57,30 +58,36 @@ namespace Inventory.Presenters
         }
         private void TransmissionNewItem(object sender, EventArgs e)
         {
+            CleanViewFields();
             _transmissionView.IsEdit = false;
         }
         private void LoadSelectedUsersToEdit(object sender, EventArgs e)
         {
             var transmission = (TransmissionModel)_transmissionBindingSource.Current;
-            _transmissionView.TransmissionId = transmission.Id;
-            _transmissionView.TransmissionItem = transmission.ItemName.ToString();
-            _transmissionView.TransmissionQuantity = transmission.Quantity;
-            _transmissionView.TransmissionCategory = transmission.Category.ToString();
-            _transmissionView.TransmissionDepartment = transmission.Department.ToString();
-            _transmissionView.TransmissionBuilding = transmission.Building.ToString();
-            _transmissionView.TransmissionDate = transmission.Date.ToString();
-
-            _transmissionView.IsEdit = true;
+            if (transmission != null)
+            {
+                _transmissionView.TransmissionId = transmission.Id;
+                _transmissionView.TransmissionItem = transmission.ItemName.ToString();
+                _transmissionView.TransmissionQuantity = transmission.Quantity;
+                _transmissionView.TransmissionCategory = transmission.Category.ToString();
+                _transmissionView.TransmissionDepartment = transmission.Department.ToString();
+                _transmissionView.TransmissionBuilding = transmission.Building.ToString();
+                _transmissionView.TransmissionDate = transmission.Date.ToString();
+                _transmissionView.IsEdit = true;
+            }
         }
         private void DeleteSelctedTransmission(object sender, EventArgs e)
         {
             try
             {
                 var transmission = (TransmissionModel)_transmissionBindingSource.Current;
-                _transmissionRepository.Delete(transmission.Id);
-                _transmissionView.IsSuccessful = true;
-                _transmissionView.Message = "تم حذف المادة بنجاح";
-                LoadAllTransmission();
+                if (transmission != null)
+                {
+                    _transmissionRepository.Delete(transmission.Id);
+                    _transmissionView.IsSuccessful = true;
+                    _transmissionView.Message = "تم حذف المادة بنجاح";
+                    LoadAllTransmission();
+                }
             }
             catch (Exception ex)
             {
@@ -142,6 +149,8 @@ namespace Inventory.Presenters
             _transmissionView.TransmissionBuilding = "";
             _transmissionView.TransmissionDepartment = "";
             _transmissionView.TransmissionDate = "";
+            _transmissionView.Consumable = "";
         }
+        
     }
 }

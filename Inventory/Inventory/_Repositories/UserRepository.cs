@@ -21,7 +21,7 @@ namespace Inventory._Repositories
         }
 
         //Methods
-        void IUsersRepository.Add(UserModel userModel)
+        public void Add(UserModel userModel)
         {
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
@@ -35,7 +35,7 @@ namespace Inventory._Repositories
                 command.ExecuteNonQuery();
             }
         }
-        void IUsersRepository.Delete(int id)
+        public void Delete(int id)
         {
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
@@ -47,7 +47,7 @@ namespace Inventory._Repositories
                 command.ExecuteNonQuery();
             }
         }
-        IEnumerable<UserModel> IUsersRepository.GetAll()
+        public  IEnumerable<UserModel> GetAll()
         {
             var userList = new List<UserModel>();
             using (var connection = new SqlConnection(connectionString))
@@ -72,7 +72,7 @@ namespace Inventory._Repositories
             }
         }
 
-        IEnumerable<UserModel> IUsersRepository.GetByvalue(string value)
+        public  IEnumerable<UserModel> GetByvalue(string value)
         {
             var userList = new List<UserModel>();
 
@@ -106,7 +106,7 @@ namespace Inventory._Repositories
             }
         }
 
-        void IUsersRepository.Update(UserModel userModel)
+        public void Update(UserModel userModel)
         {
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())

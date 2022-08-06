@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,8 +36,6 @@ namespace Inventory.Views
 
         //Methods
         void SetTransmissionBindingSource(BindingSource transmissionList);
-        void SetBuildingBindingSource(BindingSource buildingList);
-        void SetDepartmentBindingSource(BindingSource DepartmentList);
         void Show();
     }
 }

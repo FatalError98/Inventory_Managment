@@ -80,6 +80,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BuildingModel.cs" />
     <Compile Include="Models\IItemRepository.cs" />
     <Compile Include="Models\ItemModel.cs" />
     <Compile Include="Models\ITransmissionRepository.cs" />

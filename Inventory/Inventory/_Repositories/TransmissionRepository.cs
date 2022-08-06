@@ -80,7 +80,6 @@ namespace Inventory._Repositories
                 return transmissionList;
             }
         }
-
         public IEnumerable<TransmissionModel> GetByValue(string value)
         {
             var transmissionList = new List<TransmissionModel>();
