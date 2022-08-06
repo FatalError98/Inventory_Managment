@@ -145,6 +145,7 @@ namespace Inventory.Presenters
 
         private void AddNewItem(object sender, EventArgs e)
         {
+            CleanViewFields();
             _itemview.IsEdit = false;
         }
 

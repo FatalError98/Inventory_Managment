@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
@@ -43,6 +43,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.transmissionUpdateTapControl = new System.Windows.Forms.TabControl();
             this.transmissionUpdatePage = new System.Windows.Forms.TabPage();
+            this.notConsumableRadioButton = new System.Windows.Forms.RadioButton();
+            this.consumableRadioButton = new System.Windows.Forms.RadioButton();
             this.buildingComboBox = new System.Windows.Forms.ComboBox();
             this.departmentComboBox = new System.Windows.Forms.ComboBox();
             this.cancelBtn = new System.Windows.Forms.Button();
@@ -88,7 +90,7 @@
             this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.deleteBtn.FlatAppearance.BorderSize = 0;
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Font = new System.Drawing.Font("Tajawal", 12F);
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
             this.deleteBtn.Location = new System.Drawing.Point(9, 39);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -103,7 +105,7 @@
             this.updateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.updateBtn.FlatAppearance.BorderSize = 0;
             this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.Font = new System.Drawing.Font("Tajawal", 12F);
             this.updateBtn.ForeColor = System.Drawing.Color.White;
             this.updateBtn.Location = new System.Drawing.Point(98, 39);
             this.updateBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -118,7 +120,7 @@
             this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.searchBtn.FlatAppearance.BorderSize = 0;
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Font = new System.Drawing.Font("Tajawal", 12F);
             this.searchBtn.ForeColor = System.Drawing.Color.White;
             this.searchBtn.Location = new System.Drawing.Point(850, 39);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -133,7 +135,7 @@
             this.transmissionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.transmissionBtn.FlatAppearance.BorderSize = 0;
             this.transmissionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.transmissionBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transmissionBtn.Font = new System.Drawing.Font("Tajawal", 12F);
             this.transmissionBtn.ForeColor = System.Drawing.Color.White;
             this.transmissionBtn.Location = new System.Drawing.Point(200, 39);
             this.transmissionBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -158,39 +160,39 @@
             // 
             this.transmissionItemDataGridView.AllowUserToAddRows = false;
             this.transmissionItemDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.transmissionItemDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.transmissionItemDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.transmissionItemDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.transmissionItemDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.transmissionItemDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.transmissionItemDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.transmissionItemDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.transmissionItemDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.transmissionItemDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.transmissionItemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.transmissionItemDataGridView.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.transmissionItemDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.transmissionItemDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.transmissionItemDataGridView.EnableHeadersVisualStyles = false;
             this.transmissionItemDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
@@ -200,24 +202,24 @@
             this.transmissionItemDataGridView.ReadOnly = true;
             this.transmissionItemDataGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.transmissionItemDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            this.transmissionItemDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.transmissionItemDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.transmissionItemDataGridView.RowHeadersWidth = 51;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(1);
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.transmissionItemDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.transmissionItemDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.transmissionItemDataGridView.Size = new System.Drawing.Size(979, 421);
             this.transmissionItemDataGridView.TabIndex = 8;
             // 
@@ -247,6 +249,8 @@
             // transmissionUpdatePage
             // 
             this.transmissionUpdatePage.BackColor = System.Drawing.Color.White;
+            this.transmissionUpdatePage.Controls.Add(this.notConsumableRadioButton);
+            this.transmissionUpdatePage.Controls.Add(this.consumableRadioButton);
             this.transmissionUpdatePage.Controls.Add(this.buildingComboBox);
             this.transmissionUpdatePage.Controls.Add(this.departmentComboBox);
             this.transmissionUpdatePage.Controls.Add(this.cancelBtn);
@@ -272,6 +276,34 @@
             this.transmissionUpdatePage.TabIndex = 0;
             this.transmissionUpdatePage.Click += new System.EventHandler(this.transmissionUpdatePage_Click);
             // 
+            // notConsumableRadioButton
+            // 
+            this.notConsumableRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.notConsumableRadioButton.Font = new System.Drawing.Font("Tajawal", 12F);
+            this.notConsumableRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.notConsumableRadioButton.Location = new System.Drawing.Point(30, 421);
+            this.notConsumableRadioButton.Name = "notConsumableRadioButton";
+            this.notConsumableRadioButton.Size = new System.Drawing.Size(119, 24);
+            this.notConsumableRadioButton.TabIndex = 10;
+            this.notConsumableRadioButton.Text = "غير مستهلكة";
+            this.notConsumableRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.notConsumableRadioButton.UseVisualStyleBackColor = true;
+            this.notConsumableRadioButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // consumableRadioButton
+            // 
+            this.consumableRadioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.consumableRadioButton.Font = new System.Drawing.Font("Tajawal", 12F);
+            this.consumableRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.consumableRadioButton.Location = new System.Drawing.Point(169, 421);
+            this.consumableRadioButton.Name = "consumableRadioButton";
+            this.consumableRadioButton.Size = new System.Drawing.Size(104, 24);
+            this.consumableRadioButton.TabIndex = 10;
+            this.consumableRadioButton.Text = "مستهلكة";
+            this.consumableRadioButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.consumableRadioButton.UseVisualStyleBackColor = true;
+            this.consumableRadioButton.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // buildingComboBox
             // 
             this.buildingComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
@@ -281,7 +313,7 @@
             this.buildingComboBox.Items.AddRange(new object[] {
             "المنصور",
             "القاهرة"});
-            this.buildingComboBox.Location = new System.Drawing.Point(26, 249);
+            this.buildingComboBox.Location = new System.Drawing.Point(26, 238);
             this.buildingComboBox.Name = "buildingComboBox";
             this.buildingComboBox.Size = new System.Drawing.Size(157, 28);
             this.buildingComboBox.TabIndex = 4;
@@ -315,7 +347,7 @@
             "المكتبة",
             "الاعلام",
             "الاستعلامات"});
-            this.departmentComboBox.Location = new System.Drawing.Point(26, 316);
+            this.departmentComboBox.Location = new System.Drawing.Point(26, 305);
             this.departmentComboBox.Name = "departmentComboBox";
             this.departmentComboBox.Size = new System.Drawing.Size(251, 32);
             this.departmentComboBox.TabIndex = 5;
@@ -326,9 +358,9 @@
             this.cancelBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.cancelBtn.FlatAppearance.BorderSize = 2;
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Font = new System.Drawing.Font("Tajawal", 12F);
             this.cancelBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.cancelBtn.Location = new System.Drawing.Point(28, 581);
+            this.cancelBtn.Location = new System.Drawing.Point(28, 610);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(0);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(119, 31);
@@ -341,9 +373,9 @@
             this.dateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.Font = new System.Drawing.Font("Tajawal", 12F);
             this.dateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.dateLabel.Location = new System.Drawing.Point(167, 357);
+            this.dateLabel.Location = new System.Drawing.Point(167, 346);
             this.dateLabel.Margin = new System.Windows.Forms.Padding(0);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -355,7 +387,7 @@
             // dateTimePicker
             // 
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(25, 388);
+            this.dateTimePicker.Location = new System.Drawing.Point(25, 377);
             this.dateTimePicker.Margin = new System.Windows.Forms.Padding(0);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -366,9 +398,9 @@
             // 
             this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Font = new System.Drawing.Font("Tajawal", 12F);
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(160, 581);
+            this.saveBtn.Location = new System.Drawing.Point(160, 610);
             this.saveBtn.Margin = new System.Windows.Forms.Padding(0);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(117, 31);
@@ -381,9 +413,9 @@
             this.descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionLabel.BackColor = System.Drawing.Color.Transparent;
             this.descriptionLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.descriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionLabel.Font = new System.Drawing.Font("Tajawal", 12F);
             this.descriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.descriptionLabel.Location = new System.Drawing.Point(169, 415);
+            this.descriptionLabel.Location = new System.Drawing.Point(169, 468);
             this.descriptionLabel.Margin = new System.Windows.Forms.Padding(0);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -397,7 +429,7 @@
             this.quantityNumUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.quantityNumUpDown.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.quantityNumUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityNumUpDown.Location = new System.Drawing.Point(193, 251);
+            this.quantityNumUpDown.Location = new System.Drawing.Point(193, 240);
             this.quantityNumUpDown.Margin = new System.Windows.Forms.Padding(0);
             this.quantityNumUpDown.Maximum = new decimal(new int[] {
             9999,
@@ -414,7 +446,7 @@
             this.categoryTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.categoryTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.categoryTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryTxt.Location = new System.Drawing.Point(25, 185);
+            this.categoryTxt.Location = new System.Drawing.Point(25, 174);
             this.categoryTxt.Name = "categoryTxt";
             this.categoryTxt.Size = new System.Drawing.Size(250, 22);
             this.categoryTxt.TabIndex = 2;
@@ -425,7 +457,7 @@
             this.descriptionTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionTxt.Location = new System.Drawing.Point(27, 446);
+            this.descriptionTxt.Location = new System.Drawing.Point(27, 499);
             this.descriptionTxt.Multiline = true;
             this.descriptionTxt.Name = "descriptionTxt";
             this.descriptionTxt.Size = new System.Drawing.Size(250, 95);
@@ -437,9 +469,9 @@
             this.quantityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.quantityLabel.BackColor = System.Drawing.Color.Transparent;
             this.quantityLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.quantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityLabel.Font = new System.Drawing.Font("Tajawal", 12F);
             this.quantityLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.quantityLabel.Location = new System.Drawing.Point(202, 219);
+            this.quantityLabel.Location = new System.Drawing.Point(202, 208);
             this.quantityLabel.Margin = new System.Windows.Forms.Padding(0);
             this.quantityLabel.Name = "quantityLabel";
             this.quantityLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -453,7 +485,7 @@
             this.itemTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.itemTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.itemTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.itemTxt.Location = new System.Drawing.Point(24, 120);
+            this.itemTxt.Location = new System.Drawing.Point(24, 109);
             this.itemTxt.Name = "itemTxt";
             this.itemTxt.Size = new System.Drawing.Size(250, 22);
             this.itemTxt.TabIndex = 1;
@@ -464,9 +496,9 @@
             this.buildingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buildingLabel.BackColor = System.Drawing.Color.Transparent;
             this.buildingLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buildingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildingLabel.Font = new System.Drawing.Font("Tajawal", 12F);
             this.buildingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.buildingLabel.Location = new System.Drawing.Point(116, 219);
+            this.buildingLabel.Location = new System.Drawing.Point(116, 208);
             this.buildingLabel.Margin = new System.Windows.Forms.Padding(0);
             this.buildingLabel.Name = "buildingLabel";
             this.buildingLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -480,9 +512,9 @@
             this.itemLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.itemLabel.BackColor = System.Drawing.Color.Transparent;
             this.itemLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.itemLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemLabel.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.itemLabel.Location = new System.Drawing.Point(215, 89);
+            this.itemLabel.Location = new System.Drawing.Point(215, 78);
             this.itemLabel.Margin = new System.Windows.Forms.Padding(0);
             this.itemLabel.Name = "itemLabel";
             this.itemLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -496,9 +528,9 @@
             this.departmentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.departmentLabel.BackColor = System.Drawing.Color.Transparent;
             this.departmentLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.departmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.departmentLabel.Font = new System.Drawing.Font("Tajawal", 12F);
             this.departmentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.departmentLabel.Location = new System.Drawing.Point(210, 285);
+            this.departmentLabel.Location = new System.Drawing.Point(210, 274);
             this.departmentLabel.Margin = new System.Windows.Forms.Padding(0);
             this.departmentLabel.Name = "departmentLabel";
             this.departmentLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -512,7 +544,7 @@
             this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.titleLabel.BackColor = System.Drawing.Color.Transparent;
             this.titleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("Tajawal", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.titleLabel.Location = new System.Drawing.Point(49, 17);
             this.titleLabel.Margin = new System.Windows.Forms.Padding(0);
@@ -528,9 +560,9 @@
             this.categoryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.categoryLabel.BackColor = System.Drawing.Color.Transparent;
             this.categoryLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryLabel.Font = new System.Drawing.Font("Tajawal", 12F);
             this.categoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.categoryLabel.Location = new System.Drawing.Point(211, 154);
+            this.categoryLabel.Location = new System.Drawing.Point(211, 143);
             this.categoryLabel.Margin = new System.Windows.Forms.Padding(0);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -602,5 +634,7 @@
         private System.Windows.Forms.ComboBox buildingComboBox;
         private System.Windows.Forms.ComboBox departmentComboBox;
         private System.Windows.Forms.Label buildingLabel;
+        private System.Windows.Forms.RadioButton consumableRadioButton;
+        private System.Windows.Forms.RadioButton notConsumableRadioButton;
     }
 }

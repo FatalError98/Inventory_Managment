@@ -38,10 +38,13 @@ namespace Inventory
             // SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path + @"\Data\" + databaseName + ";Integrated Security=True");
             //string SqlConnectionString = Con.ConnectionString;
 
-             ILoginView view = new LoginFrom();
-             new LoginPresentor(view, sqlConnectionString);
+             //ILoginView view = new LoginFrom();
+             //new LoginPresentor(view, sqlConnectionString);
 
-        Application.Run((Form)view);
+            IMainView view = new DashboardForm();
+            new MainPresentor(view, sqlConnectionString);
+
+            Application.Run((Form)view);
         }
     }
 }

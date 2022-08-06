@@ -17,15 +17,12 @@ namespace Inventory.Views
         private bool isEdit;
         private double totalPrice;
         private int itemId = 0;
-        private static ItemForm instance;
         public ItemForm()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvent();
-            addUpdateTapControl.TabPages.Remove(addUpdatePage);
+            
         }
-
-
         public int ItemId 
         { 
             get => itemId; 
@@ -165,21 +162,6 @@ namespace Inventory.Views
         private void ItemForm_Load(object sender, EventArgs e)
         {
 
-        }
-        //Singleton Pattern (open a Signle Form instance)       
-        public static ItemForm GetInstance(Form parentContainer)
-        {
-            if (instance == null || instance.IsDisposed)
-            {
-                instance = new ItemForm();
-            }
-            else
-            {
-                if (instance.WindowState == FormWindowState.Minimized)
-                    instance.WindowState = FormWindowState.Normal;
-                instance.BringToFront();
-            }
-            return instance;
         }
     }
 }

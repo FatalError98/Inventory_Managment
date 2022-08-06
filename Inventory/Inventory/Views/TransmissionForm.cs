@@ -15,6 +15,7 @@ namespace Inventory.Views
         private string message;
         private bool isSuccessful;
         private bool isEdit;
+        private string consumable;
         private int transmissionId = 0;
 
         public int TransmissionId
@@ -76,6 +77,14 @@ namespace Inventory.Views
         {
             get => message;
             set => message = value;
+        }
+        public string Consumable 
+        { 
+            get => consumable; 
+            set
+            {
+                
+            }
         }
         public TransmissionForm()
         {
@@ -170,6 +179,15 @@ namespace Inventory.Views
 
         private void transmissionUpdatePage_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (consumableRadioButton.Checked)
+                consumable = "مستهلك";
+            if (notConsumableRadioButton.Checked)
+                consumable = "غير مستهلك";
 
         }
     }

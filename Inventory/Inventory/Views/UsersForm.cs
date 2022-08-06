@@ -34,8 +34,8 @@ namespace Inventory.Views
         }
         public string UserRole 
         {
-            get { return userRoletxt.Text; }
-            set { userRoletxt.Text = value; } 
+            get { return userRoleComboBox.Text; }
+            set { userRoleComboBox.Text = value; } 
         }
         public string SearchValue
         {
@@ -62,7 +62,7 @@ namespace Inventory.Views
         {
             InitializeComponent();
             AssociateAndRaiseViewEvent();
-            usersTabControl.TabPages.Remove(detailTabPage);
+            usersTapControl.TabPages.Remove(usersPage);
         }
 
         private void AssociateAndRaiseViewEvent()
@@ -75,21 +75,21 @@ namespace Inventory.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
             //Add New User Event
-            addNewbtn.Click += delegate { 
+            addNewBtn.Click += delegate { 
                 AddEvent?.Invoke(this, EventArgs.Empty);
-                usersTabControl.TabPages.Remove(listTabPage);
-                usersTabControl.TabPages.Add(detailTabPage);
-                detailTabPage.Text = "اضافة مستخدم جديد";
+                usersTapControl.TabPages.Remove(usersPage);
+                usersTapControl.TabPages.Add(usersPage);
+                usersPage.Text = "اضافة مستخدم جديد";
             };
             //Edit exisiting  User Event
-            editBtn.Click += delegate { 
+            updateBtn.Click += delegate { 
                 EditEvent?.Invoke(this, EventArgs.Empty);
-                usersTabControl.TabPages.Remove(listTabPage);
-                usersTabControl.TabPages.Add(detailTabPage);
-                detailTabPage.Text = "تعديل بيانات مستخدم";
+                usersTapControl.TabPages.Remove(usersPage);
+                usersTapControl.TabPages.Add(usersPage);
+                usersPage.Text = "تعديل بيانات مستخدم";
             };
             //Delete  User Event
-            deletebtn.Click += delegate {
+            deleteBtn.Click += delegate {
                ;
                var  result = MessageBox.Show("هل انت متاكد من حذف هذا المستخدم؟", "تحذير", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
                 if(result == DialogResult.Yes)
@@ -103,16 +103,16 @@ namespace Inventory.Views
                 SaveEvent?.Invoke(this, EventArgs.Empty); 
                 if(isSuccessful)
                 {
-                    usersTabControl.TabPages.Remove(detailTabPage);
-                    usersTabControl.TabPages.Add(listTabPage);
+                    usersTapControl.TabPages.Remove(usersPage);
+                    usersTapControl.TabPages.Add(usersPage);
                 }
                 MessageBox.Show(Message);
             };
             //Cancel User Event
             cancelBtn.Click += delegate { 
                 CancelEvent?.Invoke(this, EventArgs.Empty);
-                usersTabControl.TabPages.Remove(detailTabPage);
-                usersTabControl.TabPages.Add(listTabPage);
+                usersTapControl.TabPages.Remove(usersPage);
+                usersTapControl.TabPages.Add(usersPage);
             };
         }
 
@@ -140,7 +140,7 @@ namespace Inventory.Views
 
         public void SetUserListBindingSource(BindingSource userList)
         {
-            userDataGridView.DataSource = userList;
+            usersDataGridView.DataSource = userList;
         }
 
         //Singleton Pattern (open a Signle Form instance)

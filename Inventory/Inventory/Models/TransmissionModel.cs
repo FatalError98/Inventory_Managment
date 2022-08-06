@@ -21,6 +21,7 @@ namespace Inventory.Models
         private string _building;
         private DateTime _date;
         private string _description;
+        private string _consumable;
 
         [DisplayName("ت")]
         public int Id
@@ -79,6 +80,12 @@ namespace Inventory.Models
         {
             get => _description;
             set => _description = value;
+        }
+        [DisplayName("استهلاك")]
+        public string Consumable
+        {
+            get => _consumable;
+            set => _consumable = value;
         }
     }
 }

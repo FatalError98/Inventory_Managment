@@ -99,7 +99,7 @@ namespace Inventory.Presenters
             model.Building = _transmissionView.TransmissionBuilding;
             model.Date = Convert.ToDateTime(_transmissionView.TransmissionDate);
             model.Description = _transmissionView.Description;
-
+            model.Consumable = _transmissionView.Consumable;
             try
             {
                 new Common.ModelDataValidation().Validate(model);

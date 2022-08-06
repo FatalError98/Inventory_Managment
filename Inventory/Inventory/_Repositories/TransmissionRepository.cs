@@ -25,7 +25,7 @@ namespace Inventory._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "insert into Transmission values (@item, @quantity, @category, @department, @building, @date, @description)";
+                command.CommandText = "insert into Transmission values (@item, @quantity, @category, @department, @building, @date, @description, @consumable)";
                 command.Parameters.Add("@item", SqlDbType.VarChar).Value = transmissionModel.ItemName;
                 command.Parameters.Add("@quantity", SqlDbType.Int).Value = transmissionModel.Quantity;
                 command.Parameters.Add("@category", SqlDbType.VarChar).Value = transmissionModel.Category;
@@ -33,6 +33,7 @@ namespace Inventory._Repositories
                 command.Parameters.Add("@building", SqlDbType.VarChar).Value = transmissionModel.Building;
                 command.Parameters.Add("@date", SqlDbType.DateTime).Value = transmissionModel.Date;
                 command.Parameters.Add("@description", SqlDbType.VarChar).Value = transmissionModel.Description;
+                command.Parameters.Add("@consumable", SqlDbType.VarChar).Value = transmissionModel.Consumable;
                 command.ExecuteNonQuery();
             }
         }
@@ -72,6 +73,7 @@ namespace Inventory._Repositories
                         transmissionModel.Building = reader[5].ToString();
                         transmissionModel.Date = (DateTime)reader[6];
                         transmissionModel.Description = reader[7].ToString();
+                        transmissionModel.Consumable = reader[8].ToString();
                         transmissionList.Add(transmissionModel);
                     }
                 }
@@ -82,9 +84,6 @@ namespace Inventory._Repositories
         public IEnumerable<TransmissionModel> GetByValue(string value)
         {
             var transmissionList = new List<TransmissionModel>();
-
-
-
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
@@ -111,6 +110,7 @@ namespace Inventory._Repositories
                         transmissionModel.Building = reader[5].ToString();
                         transmissionModel.Date = (DateTime)reader[6];
                         transmissionModel.Description = reader[7].ToString();
+                        transmissionModel.Consumable = reader[8].ToString();
                         transmissionList.Add(transmissionModel);
                     }
                 }
@@ -125,7 +125,7 @@ namespace Inventory._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = "UPDATE Transmission SET Item = @item, Quantity = @quantity, Category = @category, Department = @department, Building = @building, Date = @date, Description = @description WHERE ID = @id";
+                command.CommandText = "UPDATE Transmission SET Item = @item, Quantity = @quantity, Category = @category, Department = @department, Building = @building, Date = @date, Description = @description , consumable = @consumable  WHERE ID = @id";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = transmissionModel.Id;
                 command.Parameters.Add("@item", SqlDbType.VarChar).Value = transmissionModel.ItemName;
                 command.Parameters.Add("@quantity", SqlDbType.Int).Value = transmissionModel.Quantity;
@@ -134,6 +134,7 @@ namespace Inventory._Repositories
                 command.Parameters.Add("@building", SqlDbType.VarChar).Value = transmissionModel.Building;
                 command.Parameters.Add("@date", SqlDbType.DateTime).Value = transmissionModel.Date;
                 command.Parameters.Add("@description", SqlDbType.VarChar).Value = transmissionModel.Description;
+                command.Parameters.Add("@consumable", SqlDbType.VarChar).Value = transmissionModel.Consumable;
                 command.ExecuteNonQuery();
             }
         }

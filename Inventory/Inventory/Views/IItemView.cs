@@ -35,6 +35,7 @@ namespace Inventory.Views
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 
+
         //Methods
         void SetItemBindingSource(BindingSource itemsSource);
         void Show();
