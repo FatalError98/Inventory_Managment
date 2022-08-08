@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             this.addItemBtn = new System.Windows.Forms.Button();
             this.transferItemBtn = new System.Windows.Forms.Button();
             this.inventoryBtn = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Tajawal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemBtn.ForeColor = System.Drawing.Color.White;
-            this.addItemBtn.Image = global::Inventory.Properties.Resources.baseline_add_box_white_36dp;
             this.addItemBtn.Location = new System.Drawing.Point(236, 10);
             this.addItemBtn.Margin = new System.Windows.Forms.Padding(10);
             this.addItemBtn.Name = "addItemBtn";
@@ -72,7 +72,6 @@
             this.transferItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.transferItemBtn.Font = new System.Drawing.Font("Tajawal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transferItemBtn.ForeColor = System.Drawing.Color.White;
-            this.transferItemBtn.Image = global::Inventory.Properties.Resources.baseline_outbox_white_36dp;
             this.transferItemBtn.Location = new System.Drawing.Point(10, 10);
             this.transferItemBtn.Margin = new System.Windows.Forms.Padding(10);
             this.transferItemBtn.Name = "transferItemBtn";
@@ -90,7 +89,6 @@
             this.inventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inventoryBtn.Font = new System.Drawing.Font("Tajawal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventoryBtn.ForeColor = System.Drawing.Color.White;
-            this.inventoryBtn.Image = global::Inventory.Properties.Resources.baseline_list_alt_white_36dp;
             this.inventoryBtn.Location = new System.Drawing.Point(236, 187);
             this.inventoryBtn.Margin = new System.Windows.Forms.Padding(10);
             this.inventoryBtn.Name = "inventoryBtn";
@@ -108,7 +106,6 @@
             this.usersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usersBtn.Font = new System.Drawing.Font("Tajawal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersBtn.ForeColor = System.Drawing.Color.White;
-            this.usersBtn.Image = global::Inventory.Properties.Resources.baseline_manage_accounts_white_36dp1;
             this.usersBtn.Location = new System.Drawing.Point(10, 364);
             this.usersBtn.Margin = new System.Windows.Forms.Padding(10);
             this.usersBtn.Name = "usersBtn";
@@ -183,7 +180,6 @@
             this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsBtn.Font = new System.Drawing.Font("Tajawal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsBtn.ForeColor = System.Drawing.Color.White;
-            this.settingsBtn.Image = global::Inventory.Properties.Resources.baseline_settings_white_36dp;
             this.settingsBtn.Location = new System.Drawing.Point(236, 364);
             this.settingsBtn.Margin = new System.Windows.Forms.Padding(10);
             this.settingsBtn.Name = "settingsBtn";
@@ -261,6 +257,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "الواجهة الرئيسية";

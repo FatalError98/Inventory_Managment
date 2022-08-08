@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemForm));
             this.addUpdateTapControl = new System.Windows.Forms.TabControl();
             this.addUpdatePage = new System.Windows.Forms.TabPage();
             this.cancelBtn = new System.Windows.Forms.Button();
@@ -594,6 +595,7 @@
             this.Controls.Add(this.addUpdateTapControl);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Tajawal", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ItemForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;

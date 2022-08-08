@@ -53,10 +53,7 @@ namespace Inventory
         public event EventHandler ChangeActiveButtonColor;
         private void DashboardFrom_Load(object sender, EventArgs e)
         {
-            inventoryBtn.Enabled = false;
-            settingsBtn.Enabled = false;
-            button1.Enabled = false;
-            usersBtn.Enabled = false;
+
         }
     }
 }
