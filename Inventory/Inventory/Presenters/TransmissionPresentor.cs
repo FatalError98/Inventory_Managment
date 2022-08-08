@@ -150,6 +150,7 @@ namespace Inventory.Presenters
             _transmissionView.TransmissionDepartment = "";
             _transmissionView.TransmissionDate = "";
             _transmissionView.Consumable = "";
+            _transmissionView.Description = "";
         }
         
     }

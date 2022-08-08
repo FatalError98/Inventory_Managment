@@ -145,6 +145,7 @@ namespace Inventory.Views
                 if (isSuccessful)
                 {
                    addUpdateTapControl.TabPages.Remove(addUpdatePage);
+                   addUpdateTapControl.TabPages.Add(addUpdatePage);
                 }
                 MessageBox.Show(Message);
             };

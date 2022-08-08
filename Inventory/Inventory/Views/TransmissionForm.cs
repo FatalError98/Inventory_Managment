@@ -115,7 +115,7 @@ namespace Inventory.Views
                 UpdateEvent?.Invoke(this, EventArgs.Empty);
                 transmissionUpdateTapControl.TabPages.Remove(transmissionUpdatePage);
                 transmissionUpdateTapControl.TabPages.Add(transmissionUpdatePage);
-                titleLabel.Text =  " تحديث البيانات المسلمة";
+                titleLabel.Text =  "تحديث البيانات المسلمة";
             };
 
             //Delete Transmission Event
@@ -136,6 +136,7 @@ namespace Inventory.Views
                 if (isSuccessful)
                 {
                     transmissionUpdateTapControl.TabPages.Remove(transmissionUpdatePage);
+                    transmissionUpdateTapControl.TabPages.Add(transmissionUpdatePage);
                 }
                 MessageBox.Show(Message);
             };
@@ -177,6 +178,9 @@ namespace Inventory.Views
                 consumable = "غير مستهلك";
         }
 
+        private void transmissionBtn_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

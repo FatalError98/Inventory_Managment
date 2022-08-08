@@ -63,7 +63,6 @@
             this.addItemBtn.Text = "الادخال";
             this.addItemBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.addItemBtn.UseVisualStyleBackColor = false;
-            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
             // transferItemBtn
             // 
@@ -82,7 +81,6 @@
             this.transferItemBtn.Text = "الاخراج";
             this.transferItemBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.transferItemBtn.UseVisualStyleBackColor = false;
-            this.transferItemBtn.Click += new System.EventHandler(this.transferItemBtn_Click);
             // 
             // inventoryBtn
             // 
@@ -101,7 +99,6 @@
             this.inventoryBtn.Text = "الجرد";
             this.inventoryBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.inventoryBtn.UseVisualStyleBackColor = false;
-            this.inventoryBtn.Click += new System.EventHandler(this.inventoryBtn_Click);
             // 
             // usersBtn
             // 
@@ -120,7 +117,6 @@
             this.usersBtn.Text = "المستخدمون";
             this.usersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.usersBtn.UseVisualStyleBackColor = false;
-            this.usersBtn.Click += new System.EventHandler(this.usersBtn_Click);
             // 
             // versionLabel
             // 
@@ -196,7 +192,6 @@
             this.settingsBtn.Text = "الاعدادات";
             this.settingsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.settingsBtn.UseVisualStyleBackColor = false;
-            this.settingsBtn.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // tableLayoutPanel1
             // 

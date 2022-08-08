@@ -35,12 +35,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.userRoleComboBox = new System.Windows.Forms.ComboBox();
             this.usersPage = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.userNameTxt = new System.Windows.Forms.TextBox();
             this.buildingLabel = new System.Windows.Forms.Label();
             this.userNamelabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.usersTapControl = new System.Windows.Forms.TabControl();
@@ -52,9 +55,6 @@
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.usersDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.usersPage.SuspendLayout();
             this.usersTapControl.SuspendLayout();
@@ -74,7 +74,7 @@
             this.userRoleComboBox.Location = new System.Drawing.Point(26, 332);
             this.userRoleComboBox.Name = "userRoleComboBox";
             this.userRoleComboBox.Size = new System.Drawing.Size(245, 28);
-            this.userRoleComboBox.TabIndex = 4;
+            this.userRoleComboBox.TabIndex = 5;
             // 
             // usersPage
             // 
@@ -97,6 +97,21 @@
             this.usersPage.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.usersPage.Size = new System.Drawing.Size(294, 674);
             this.usersPage.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Font = new System.Drawing.Font("Tajawal", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.checkBox1.Location = new System.Drawing.Point(155, 267);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(116, 22);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "اظهار كلمة المرور";
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // cancelBtn
             // 
@@ -127,6 +142,17 @@
             this.saveBtn.TabIndex = 8;
             this.saveBtn.Text = "حفظ";
             this.saveBtn.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(24, 236);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 22);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // passwordTxt
             // 
@@ -181,6 +207,22 @@
             this.userNamelabel.TabIndex = 0;
             this.userNamelabel.Text = "اسم المستخدم";
             this.userNamelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Tajawal", 12F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.label1.Location = new System.Drawing.Point(155, 205);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(119, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "تأكيد كلمة المرور";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // titleLabel
             // 
@@ -389,48 +431,6 @@
             this.usersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.usersDataGridView.Size = new System.Drawing.Size(979, 421);
             this.usersDataGridView.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Tajawal", 12F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(155, 205);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(119, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "تأكيد كلمة المرور";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(24, 236);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 22);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Tajawal", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.checkBox1.Location = new System.Drawing.Point(155, 267);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(116, 22);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "اظهار كلمة المرور";
-            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
