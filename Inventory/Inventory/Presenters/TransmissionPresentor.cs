@@ -18,9 +18,6 @@ namespace Inventory.Presenters
         private ITransmissionRepository _transmissionRepository;
         private BindingSource _transmissionBindingSource;     
         private IEnumerable<TransmissionModel> _transmissionModels;
-
-
-
         public TransmissionPresentor(ITransmissionView transmissionView, ITransmissionRepository treansmissionRepository)
         {
             _transmissionBindingSource = new BindingSource();
@@ -44,13 +41,10 @@ namespace Inventory.Presenters
 
             transmissionView.Show();
         }
-
-
         //Methods
         private void SearchTransmission(object sender, EventArgs e)
         {
-            bool emptyValues = _transmissionView.TransmissionSearch == "";
-            if (emptyValues != true)
+            if (!string.IsNullOrEmpty(_transmissionView.TransmissionSearch))
                 _transmissionModels = _transmissionRepository.GetByValue(_transmissionView.TransmissionSearch);
             else
                 _transmissionModels = _transmissionRepository.GetAll();
@@ -151,7 +145,6 @@ namespace Inventory.Presenters
             _transmissionView.TransmissionDate = "";
             _transmissionView.Consumable = "";
             _transmissionView.Description = "";
-        }
-        
+        }        
     }
 }

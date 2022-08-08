@@ -25,7 +25,6 @@ namespace Inventory.Views
         bool IsSuccessful { get; set; }
         string Message { get; set; }
         string Consumable { get; set; } 
-
         //Events
         event EventHandler SearchEvent;
         event EventHandler TransmisstionEvent;
@@ -33,7 +32,6 @@ namespace Inventory.Views
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
-
         //Methods
         void SetTransmissionBindingSource(BindingSource transmissionList);
         void Show();
